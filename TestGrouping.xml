@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="sample.listener.Listener"></listener>
+	</listeners>
+	<test thread-count="5" name="OnlyTerrestrial">
+		<groups>
+			<run>
+				<include name="Terrestrial" />
+				<exclude name="Amphibian" />
+			</run>
+		</groups>
+		<classes>
+			<class name="sample.tests.TestSequencing" />
+			<class name="sample.tests.TestGrouping" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="Terrestrial">
+		<groups>
+			<run>
+				<include name="Terrestrial" />
+			</run>
+		</groups>
+		<classes>
+			<class name="sample.tests.TestSequencing" />
+			<class name="sample.tests.TestGrouping" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="OnlyAquatic">
+		<groups>
+			<run>
+				<include name="Aquatic" />
+				<exclude name="Amphibian" />
+			</run>
+		</groups>
+		<classes>
+			<class name="sample.tests.TestSequencing" />
+			<class name="sample.tests.TestGrouping" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="Aquatic">
+		<groups>
+			<run>
+				<include name="Aquatic" />
+			</run>
+		</groups>
+		<classes>
+			<class name="sample.tests.TestSequencing" />
+			<class name="sample.tests.TestGrouping" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="Amphibian">
+		<groups>
+			<run>
+				<include name="Amphibian" />
+			</run>
+		</groups>
+		<classes>
+			<class name="sample.tests.TestSequencing" />
+			<class name="sample.tests.TestGrouping" />
+		</classes>
+	</test>
+</suite>
