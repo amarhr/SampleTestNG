@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<listeners>
+	<!-- <listeners>
 		<listener class-name="sample.listener.Listener"></listener>
-	</listeners>
+	</listeners> -->
 	<test parallel="classes" thread-count="5" name="Test">
 		<classes>
 			<class name="sample.tests.NewTest" />
 			<class name="sample.tests.TestSequencing"/>
+			<class name="sample.tests.TestAPHome" />
+			<class name="sample.tests.ExtentReportsClassVersion3" />
+			<class name="sample.tests.TestGrouping" />
+			<class name="sample.tests.TestDataProvider" />
 			<class name="sample.tests.TestAPHome" />
 		</classes>
 	</test> <!-- Test -->
