@@ -19,9 +19,9 @@ public class TestPriority {
 	@BeforeClass
 	public void OpenBrowser(String browserType) {
 
-		System.setProperty("webdriver.chrome.driver", "D:\\JARS\\chromedriver239.exe");
-		System.setProperty("webdriver.gecko.driver", "D:\\JARS\\geckodriver.exe");
-		System.setProperty("webdriver.ie.driver", "D:\\JARS\\IEDriverServer312.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver239.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\JARS\\geckodriver.exe");
+		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\JARS\\IEDriverServer312.exe");
 		
 		DesiredCapabilities caps = null;
 		

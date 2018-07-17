@@ -9,12 +9,13 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-// @Listeners(sample.listener.Listener.class)
+@Listeners(sample.listener.Listener.class)
 public class NewTest {
 	private WebDriver driver;
-
+	
 	@Test(dependsOnMethods="xbeforeTestOpenBrowser")
 	public void TestGuruTitle() {
 		driver.get("http://demo.guru99.com/");  
@@ -82,9 +83,9 @@ public class NewTest {
 		}
 
 		driver.manage().deleteAllCookies();
-		// driver.quit();
+		Assert.assertTrue(true);
 	}
-
+	
 	@AfterTest
 	public void afterTest() {
 		driver.quit();

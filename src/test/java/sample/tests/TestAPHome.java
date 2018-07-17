@@ -9,6 +9,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
@@ -20,12 +21,14 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(sample.listener.Listener.class)
 public class TestAPHome {
 	private WebDriver driver;
 
-	@Test (dependsOnMethods = "openBrowser", enabled=false)
+	@Test (dependsOnMethods = "openBrowser", enabled=true)
 	public void TestAPTitle() {
 		driver.navigate().to("http://automationpractice.com/index.php");
 		//driver.get("http://automationpractice.com/index.php");
@@ -54,13 +57,13 @@ public class TestAPHome {
 		try {
 			Random random = new Random();
 			int randomNumber = random.nextInt(10000);
-			FileUtils.copyFile(src, new File("D://screenshots//BorderUsername" + randomNumber));
+			FileUtils.copyFile(src, new File(System.getProperty("user.dir") + "//screenshots//BorderUsername" + randomNumber));
 		} catch (IOException io) {
 			io.printStackTrace();
 		}
 	}
 	
-	@Test(dependsOnMethods="openBrowser", enabled=false)
+	@Test(dependsOnMethods="openBrowser", enabled=true)
 	public void highligtLogonButton() {
 		driver.get("https://www.flipkart.com/");
 		WebElement	logon = driver.findElement(By.xpath("//span[text()='Login']/.."));
@@ -83,7 +86,7 @@ public class TestAPHome {
 		}
 	}
 	
-	@Test(dependsOnMethods="openBrowser", enabled=false)
+	@Test(dependsOnMethods="openBrowser", enabled=true)
 	public void testFlash() {
 		driver.get("https://www.flipkart.com/");
 		WebElement	logon = driver.findElement(By.xpath("//button/span[text()='Login']/.."));
@@ -114,7 +117,7 @@ public class TestAPHome {
 		Assert.assertEquals(title, "Online Shopping Site for Mobiles, Fashion, Books, Electronics, Home Appliances and More");
 	}
 	
-	@Test(dependsOnMethods="openBrowser", enabled=false)
+	@Test(dependsOnMethods="openBrowser", enabled=true)
 	public void testScroll() throws InterruptedException {
 		driver.get("https://www.flipkart.com/");
 		
@@ -158,11 +161,10 @@ public class TestAPHome {
 		Thread.sleep(5000);
 	}
 	
-	@Test(dependsOnMethods="openBrowser", enabled=false)
+	@Test(dependsOnMethods="openBrowser", enabled=true)
 	public void testStaleElementReferenceException() {
 		driver.get("https://www.flipkart.com/");
-		
-		WebElement logon = driver.findElement(By.xpath("//button/span[text()='Login']/.."));
+		WebElement logon = getLogonElement();
 		
 		((JavascriptExecutor)driver).executeScript("history.go(0)");
 
@@ -170,19 +172,31 @@ public class TestAPHome {
 			// System.out.println(logon.);
 			logon.sendKeys(Keys.ESCAPE);
 		} catch(StaleElementReferenceException staleObj) {
-			logon = driver.findElement(By.xpath("//button/span[text()='Login']/.."));
+			logon = getLogonElement();
 			logon.sendKeys("Am");
 			System.out.println("MESSAGE : " + staleObj.getMessage());
 			Assert.assertEquals(staleObj.getClass(), StaleElementReferenceException.class);
 		}
+	}
+	
+	private WebElement getLogonElement() {
+		String xpathForLogon = "//button/span[text()='Login']/..";
+		WebElement logon = null;
+		try {
+			logon = driver.findElement(By.xpath(xpathForLogon));
+		} catch(NoSuchElementException noEleExcep) {
+			xpathForLogon = "//*[@id='container']//a[contains(.,'Login & Signup')]";
+			logon = driver.findElement(By.xpath(xpathForLogon));
+		}
 		
+		return logon;
 	}
 	
 	@Test(dependsOnMethods="openBrowser", enabled=true)
 	public void testheadless() {
 		driver.get("https://www.flipkart.com/");
 		
-		WebElement logon = driver.findElement(By.xpath("//button/span[text()='Login']/.."));
+		WebElement logon = getLogonElement();
 		
 		((JavascriptExecutor)driver).executeScript("history.go(0)");
 
@@ -190,7 +204,7 @@ public class TestAPHome {
 			// System.out.println(logon.);
 			logon.sendKeys(Keys.ESCAPE);
 		} catch(StaleElementReferenceException staleObj) {
-			logon = driver.findElement(By.xpath("//button/span[text()='Login']/.."));
+			logon = getLogonElement();
 			logon.sendKeys("Am");
 			System.out.println("MESSAGE : " + staleObj.getMessage());
 			Assert.assertEquals(staleObj.getClass(), StaleElementReferenceException.class);
@@ -202,9 +216,9 @@ public class TestAPHome {
 	public void openBrowser() {
 		String browserType = "Chrome";
 
-		System.setProperty("webdriver.chrome.driver", "D:\\JARS\\chromedriver239.exe");
-		System.setProperty("webdriver.gecko.driver", "D:\\JARS\\geckodriver.exe");
-		System.setProperty("webdriver.ie.driver", "D:\\JARS\\IEDriverServer312.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver239.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\JARS\\geckodriver.exe");
+		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\JARS\\IEDriverServer312.exe");
 		
 		DesiredCapabilities caps = null;
 		

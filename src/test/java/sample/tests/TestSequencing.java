@@ -7,10 +7,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
+@Listeners(sample.listener.Listener.class)
 public class TestSequencing {
   @Test
   public void testCase1() {

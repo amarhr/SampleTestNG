@@ -6,8 +6,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(sample.listener.Listener.class)
 public class TestDataProvider {
 
 	@DataProvider( name = "Authentication" )
@@ -32,9 +34,9 @@ public class TestDataProvider {
 		WebDriver driver = null;
 		// String browserType = "IE";
 
-		System.setProperty("webdriver.chrome.driver", "D:\\JARS\\chromedriver239.exe");
-		System.setProperty("webdriver.gecko.driver", "D:\\JARS\\geckodriver.exe");
-		System.setProperty("webdriver.ie.driver", "D:\\JARS\\IEDriverServer312.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver239.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\JARS\\geckodriver.exe");
+		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\JARS\\IEDriverServer312.exe");
 		
 		DesiredCapabilities caps = null;
 		
