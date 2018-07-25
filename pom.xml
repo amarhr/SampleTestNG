@@ -25,7 +25,7 @@
 		    <groupId>com.aventstack</groupId>
 		    <artifactId>extentreports</artifactId>
 		    <version>3.1.5</version>
-		    <scope>provided</scope>
+		    <scope>test</scope>
 		</dependency>
   </dependencies>
 	<build>
