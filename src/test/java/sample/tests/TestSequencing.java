@@ -14,19 +14,19 @@ import org.testng.annotations.AfterSuite;
 
 @Listeners(sample.listener.Listener.class)
 public class TestSequencing {
-  @Test
+  @Test(priority=0)
   public void testCase1() {
 	  System.out.println("This is testCase1");
 	  Reporter.log("This is testCase1");
   }
   
-  @Test
-  public void testCase2() {
-	  System.out.println("This is testCase2");
-	  Reporter.log("This is testCase2");
+  @Test(priority=0)
+  public void testCaseA() {
+	  System.out.println("This is testCaseA");
+	  Reporter.log("This is testCaseA");
   }
   
-  @BeforeMethod
+  /*@BeforeMethod
   public void beforeMethod() {
 	  System.out.println("This is BeforeMethod");
 	  Reporter.log("This is BeforeMethod");
@@ -72,5 +72,5 @@ public class TestSequencing {
   public void afterSuite() {
 	  System.out.println("This is AfterSuite");
 	  Reporter.log("This is AfterSuite");
-  }
+  }*/
 }

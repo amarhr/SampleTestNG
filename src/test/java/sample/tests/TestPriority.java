@@ -52,22 +52,22 @@ public class TestPriority {
 		System.out.println("Executing test case One");
 	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1, enabled = true)
 	public void Two() {
 		System.out.println("Executing test case Two");
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void Three() {
 		System.out.println("Executing test case Three");
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void Fourth() {
 		System.out.println("Executing test case Fourth");
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void Fourth1() {
 		System.out.println("Executing test case Fourth1");
 	}

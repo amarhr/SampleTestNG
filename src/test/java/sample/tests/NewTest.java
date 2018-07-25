@@ -16,16 +16,15 @@ import org.testng.annotations.Test;
 public class NewTest {
 	private WebDriver driver;
 	
-	@Test(dependsOnMethods="xbeforeTestOpenBrowser")
+	/*@Test(dependsOnMethods="xbeforeTestOpenBrowser")
 	public void TestGuruTitle() {
 		driver.get("http://demo.guru99.com/");  
 		String title = driver.getTitle();				 
 		Assert.assertTrue(title.contains("Guru99 Bank Home Page"));
-	}
+	}*/
 
-	@Test
-	public void xbeforeTestOpenBrowser() {
-		String browserType = "FFWinHeadless";
+	public WebDriver OpenBrowser(String browserType) {
+		// String browserType = "FFWinHeadless";
 		FirefoxOptions ffOptions = null;
 		FirefoxBinary firefoxBinary = null;
 
@@ -84,6 +83,7 @@ public class NewTest {
 
 		driver.manage().deleteAllCookies();
 		Assert.assertTrue(true);
+		return driver;
 	}
 	
 	@AfterTest
