@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 51.914 sec <<< FAILURE! - in TestSuite
+TestScrollUsingJS(sample.guru99.TestScrolling)  Time elapsed: 17.383 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'HAH1W10BLR', ip: '10.201.133.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_232'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:703)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:631)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:593)
+	at core.util.SeleniumCore.moveToElement(SeleniumCore.java:29)
+	at sample.guru99.TestScrolling.TestScrollUsingJS(TestScrolling.java:47)
+

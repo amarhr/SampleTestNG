@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test-class Suite" parallel="methods" thread-count="10">
+    <test name="Test-class test 1" >
+        <classes>
+            <class name="sample.guru99.TestScrolling"/>
+            <!--  <class name="sample.guru99.TestActions"/> -->
+        </classes>
+    </test>
+</suite>

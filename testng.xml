@@ -3,15 +3,20 @@
 <suite name="Suite">
 	<!-- <listeners>
 		<listener class-name="sample.listener.Listener"></listener>
-	</listeners> -->
-	<test parallel="classes" thread-count="5" name="Test">
+	</listeners> 
+	 parallel="classes" thread-count="5" name="Test"
+	-->
+	
+	<test parallel="none" name="Test">
 		<classes>
 			<class name="sample.tests.NewTest" />
-			<class name="sample.tests.TestSequencing"/>
-			<class name="sample.tests.TestAPHome" />
+			<!-- <class name="sample.tests.TestSequencing"/>
+	
+			
 			<class name="sample.tests.ExtentReportsClassVersion3" />
 			<class name="sample.tests.TestGrouping" />
-			<class name="sample.tests.TestDataProvider" />
+			<class name="sample.tests.TestDataProvider" /> 
+			<class name="sample.tests.TestAPHome" />-->
 			<class name="sample.tests.TestAPHome" />
 		</classes>
 	</test> <!-- Test -->

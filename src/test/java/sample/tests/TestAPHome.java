@@ -24,27 +24,26 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(sample.listener.Listener.class)
-public class TestAPHome {
+// @Listeners(sample.listener.Listener.class)
+public class TestAPHome{
 	private WebDriver driver;
 
 	@Test (dependsOnMethods = "openBrowser", enabled=true)
-	public void TestAPTitle() {
+	public void TestAPTitle(){
 		driver.navigate().to("http://automationpractice.com/index.php");
 		//driver.get("http://automationpractice.com/index.php");
 		
 		String title = driver.getTitle();				 
 		Assert.assertTrue(title.contains("My Store"));
 		
-
 		WebElement signIn = driver.findElement(By.className("login"));
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", signIn);
 		
+		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -63,7 +62,7 @@ public class TestAPHome {
 		}
 	}
 	
-	@Test(dependsOnMethods="openBrowser", enabled=true)
+	@Test(dependsOnMethods="openBrowser", enabled=false)
 	public void highligtLogonButton() {
 		driver.get("https://www.flipkart.com/");
 		WebElement	logon = driver.findElement(By.xpath("//span[text()='Login']/.."));
@@ -86,7 +85,7 @@ public class TestAPHome {
 		}
 	}
 	
-	@Test(dependsOnMethods="openBrowser", enabled=true)
+	@Test(dependsOnMethods="openBrowser", enabled=false)
 	public void testFlash() {
 		driver.get("https://www.flipkart.com/");
 		WebElement	logon = driver.findElement(By.xpath("//button/span[text()='Login']/.."));
@@ -117,7 +116,7 @@ public class TestAPHome {
 		Assert.assertEquals(title, "Online Shopping Site for Mobiles, Fashion, Books, Electronics, Home Appliances and More");
 	}
 	
-	@Test(dependsOnMethods="openBrowser", enabled=true)
+	@Test(dependsOnMethods="openBrowser", enabled=false)
 	public void testScroll() throws InterruptedException {
 		driver.get("https://www.flipkart.com/");
 		
@@ -161,7 +160,7 @@ public class TestAPHome {
 		Thread.sleep(5000);
 	}
 	
-	@Test(dependsOnMethods="openBrowser", enabled=true)
+	@Test(dependsOnMethods="openBrowser", enabled=false)
 	public void testStaleElementReferenceException() {
 		driver.get("https://www.flipkart.com/");
 		WebElement logon = getLogonElement();
@@ -192,7 +191,7 @@ public class TestAPHome {
 		return logon;
 	}
 	
-	@Test(dependsOnMethods="openBrowser", enabled=true)
+	@Test(dependsOnMethods="openBrowser", enabled=false)
 	public void testheadless() {
 		driver.get("https://www.flipkart.com/");
 		
@@ -212,8 +211,9 @@ public class TestAPHome {
 		
 	}
 
-	@Test
+	@Test(enabled=true)
 	public void openBrowser() {
+		System.out.println("openBrowser()---------------------------------");
 		String browserType = "Chrome";
 
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver239.exe");
@@ -232,6 +232,7 @@ public class TestAPHome {
 				caps = DesiredCapabilities.chrome();
 				caps.setCapability("ignoreZoomSetting", true);
 				driver = new ChromeDriver();
+				
 				break;
 			case "IE":
 				caps = DesiredCapabilities.internetExplorer();
@@ -243,6 +244,20 @@ public class TestAPHome {
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+	
+	@Test(enabled=false)
+	public void lauchChrome() {
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver239.exe");
+		driver = new ChromeDriver();
+	}
+	
+	void testException() {
+		// TestAPTitle();
+		
+		int a = 1/0;
+		
+		// 100 lines 
 	}
 
 	@AfterTest

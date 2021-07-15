@@ -1,0 +1,13 @@
+sample\tests\NewTest.class
+sample\tests\parallel\ParallelSuiteTest.class
+sample\tests\TestAPHome.class
+flipkart\tests\TestSearching.class
+sample\tests\TestPriority.class
+sample\tests\NewTestA.class
+sample\tests\ExtentReportsClassVersion3.class
+sample\tests\TestDataProvider.class
+snippet\Snippet.class
+sample\listener\Listener.class
+sample\tests\TestSequencing.class
+sample\tests\TestExtentReport.class
+sample\tests\TestGrouping.class

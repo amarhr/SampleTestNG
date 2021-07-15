@@ -6,17 +6,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-@Listeners(sample.listener.Listener.class)
+// @Listeners(sample.listener.Listener.class)
 public class TestPriority {
 	WebDriver driver;
 
 	@Parameters({ "browserType" })
-	@BeforeClass
+	//@BeforeClass
 	public void OpenBrowser(String browserType) {
 
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver239.exe");
@@ -49,32 +50,43 @@ public class TestPriority {
 
 	@Test(priority = 0)
 	public void One() {
-		System.out.println("Executing test case One");
+		System.out.println("Executing test case One: Thread id = " + Thread.currentThread().getId());
+		System.out.println("Priority0");
 	}
 
 	@Test(priority = 1, enabled = true)
 	public void Two() {
-		System.out.println("Executing test case Two");
+		System.out.println("Executing test case Two: Thread id = " + Thread.currentThread().getId());
+		System.out.println("Priority1");
 	}
 
 	@Test(priority = 2, enabled = true)
 	public void Three() {
-		System.out.println("Executing test case Three");
+		System.out.println("Executing test case Three:  Thread id = " + Thread.currentThread().getId());
+		System.out.println("Priority2");
 	}
 
 	@Test(priority = 3, enabled = true)
 	public void Fourth() {
-		System.out.println("Executing test case Fourth");
+		System.out.println("Executing test case Fourth: Thread id = " + Thread.currentThread().getId());
+		System.out.println("Priority2");
 	}
 
 	@Test(priority = 3, enabled = true)
-	public void Fourth1() {
-		System.out.println("Executing test case Fourth1");
+	public void Fifth() {
+		System.out.println("Executing test case Fifth: Thread id = " + Thread.currentThread().getId());
+		System.out.println("Priority3");
 	}
 
 	@AfterMethod
 	public void quit() {
-		System.out.println("Exiting the driver after method");
-		driver.quit();
+		System.out.println("-------------------------------------------");
+		// System.out.println("Exiting the driver after method");
+		//driver.quit();
+	}
+	
+	@AfterSuite
+	public void afterSuite() {
+		
 	}
 }

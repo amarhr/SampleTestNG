@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<listeners>
+	 <listeners>
 		<listener class-name="sample.listener.Listener"></listener>
-	</listeners>
+	</listeners> 
+	
+	<test name="AllAnimals">
+		<classes>
+			<class name="sample.tests.TestGrouping" />
+		</classes>
+	</test>
+	
+	<test thread-count="5" name="AllTerrestrial">
+		<groups>
+			<run>
+				<include name="Terrestrial" />
+			</run>
+		</groups>
+		<classes>
+			<class name="sample.tests.TestGrouping" />
+		</classes>
+	</test>
+	
+	
 	<test thread-count="5" name="OnlyTerrestrial">
 		<groups>
 			<run>
 				<include name="Terrestrial" />
-				<exclude name="Amphibian" />
+				<exclude name="Aquatic" />
 			</run>
 		</groups>
 		<classes>
-			<class name="sample.tests.TestSequencing" />
-			<class name="sample.tests.TestGrouping" />
-		</classes>
-	</test>
-
-	<test thread-count="5" name="Terrestrial">
-		<groups>
-			<run>
-				<include name="Terrestrial" />
-			</run>
-		</groups>
-		<classes>
-			<class name="sample.tests.TestSequencing" />
 			<class name="sample.tests.TestGrouping" />
 		</classes>
 	</test>
@@ -33,11 +39,10 @@
 		<groups>
 			<run>
 				<include name="Aquatic" />
-				<exclude name="Amphibian" />
+				<exclude name="Terrestrial" />
 			</run>
 		</groups>
 		<classes>
-			<class name="sample.tests.TestSequencing" />
 			<class name="sample.tests.TestGrouping" />
 		</classes>
 	</test>
@@ -49,20 +54,63 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="sample.tests.TestSequencing" />
 			<class name="sample.tests.TestGrouping" />
 		</classes>
 	</test>
 
 	<test thread-count="5" name="Amphibian">
+		<method-selectors>
+		    <method-selector>
+		      <script language="beanshell"><![CDATA[
+		        (groups.containsKey(Terrestrial) || groups.containsKey(Aquatic))]]>
+		        </script>
+		     </method-selector>
+    	</method-selectors>
+		
 		<groups>
 			<run>
-				<include name="Amphibian" />
+				<include name="Terrestrial" />
+				<include name="Aquatic"></include>
 			</run>
 		</groups>
 		<classes>
-			<class name="sample.tests.TestSequencing" />
 			<class name="sample.tests.TestGrouping" />
+		</classes>
+	</test>
+	
+	<test name="Mammal">
+		<groups>
+			<run>
+				<include name="Mammal" />
+			</run>
+		</groups>
+		<classes>
+			<class name="sample.tests.TestGrouping" />
+		</classes>
+	</test> 
+	
+	<test name="AquaticMammal">
+		<method-selectors>
+		    <method-selector>
+		      <script language="beanshell"><![CDATA[
+		        (groups.containsKey("Aquatic") && groups.containsKey("Mammal"))]]>
+		        </script>
+		     </method-selector>
+    	</method-selectors>
+		<classes>
+			<class name="sample.tests.TestGrouping">
+		    </class>
+		</classes>
+	</test>
+	
+	<test name="Reptile">
+		<groups>
+			<run>
+				<include name="Reptile"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="sample.tests.TestGrouping"></class>
 		</classes>
 	</test>
 </suite>

@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(sample.listener.Listener.class)
+// @Listeners(sample.listener.Listener.class)
 public class TestDataProvider {
 
 	@DataProvider( name = "Authentication" )
@@ -17,17 +17,17 @@ public class TestDataProvider {
 		return new Object[][] { {"amar", "BE"}, {"aaru", "UKG"} }; 
 	}
 	
-	@DataProvider( name = "BrowserType" )
-	public static Object[]BrowserType() {
-		return new Object[] { "Chrome", "IE"}; 
-	}
+	/*@DataProvider( name = "BrowserType" )
+	public static String[] BrowserType() {
+		return new String[] { "Chrome1", "IE", "Firefox"}; 
+	}*/
 	
-	@Test(dataProvider = "Authentication", enabled=false)
+	@Test(dataProvider = "Authentication")
 	public void qualificationTest(String name, String qualification) {
 		System.out.println("NAME AND QUALIFICATION" + name + qualification);
 	}
 	
-	@Test(dataProvider = "BrowserType")
+	// @Test(dataProvider = "BrowserType")
 	public void instantiatebrowser(String browserType) {
 		System.out.println("BROWSER" + browserType);
 		

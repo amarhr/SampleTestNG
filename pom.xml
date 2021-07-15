@@ -27,6 +27,17 @@
 		    <version>3.1.5</version>
 		    <scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.18.8</version>
+		    <scope>provided</scope>
+		</dependency>
   </dependencies>
 	<build>
 		<pluginManagement>
@@ -38,8 +49,10 @@
 					<inherited>true</inherited>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>testng.xml</suiteXmlFile>
-							<suiteXmlFile>TestGrouping.xml</suiteXmlFile>
+							<suiteXmlFile>TestGuru99.xml</suiteXmlFile>
+							<!--  <suiteXmlFile>TestScrolling.xml</suiteXmlFile>
+							<suiteXmlFile>TestGrouping.xml</suiteXmlFile> 
+							<suiteXmlFile>testng.xml</suiteXmlFile>-->
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

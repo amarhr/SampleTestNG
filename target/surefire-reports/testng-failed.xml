@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="10" verbose="0" name="Failed suite [Test-class Suite]" parallel="methods">
+  <test name="Test-class test 1(failed)" parallel="methods">
+    <classes>
+      <class name="sample.guru99.TestScrolling">
+        <methods>
+          <include name="tearDown"/>
+          <include name="TestScrollUsingJS"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- sample.guru99.TestScrolling -->
+    </classes>
+  </test> <!-- Test-class test 1(failed) -->
+</suite> <!-- Failed suite [Test-class Suite] -->
