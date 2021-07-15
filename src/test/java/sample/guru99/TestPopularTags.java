@@ -1,6 +1,5 @@
 package sample.guru99;
 
-import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -35,14 +34,15 @@ public class TestPopularTags {
 		}
 	}
 
-	public static void main(String[] args) {
-		TestPopularTags obj = new TestPopularTags();
-		
-		List<WebElement> listPopularItems = driver.findElements(
-				By.xpath("//h2[text()='Popular Tools']/ancestor::div[4]/following-sibling::div[1]//h4/a"));
-
-		for (WebElement webElement : listPopularItems) {
-			System.out.println(webElement.getText());
-		}
-	}
+	/*
+	 * public static void main(String[] args) { TestPopularTags obj = new
+	 * TestPopularTags();
+	 * 
+	 * List<WebElement> listPopularItems = driver.findElements( By.
+	 * xpath("//h2[text()='Popular Tools']/ancestor::div[4]/following-sibling::div[1]//h4/a"
+	 * ));
+	 * 
+	 * for (WebElement webElement : listPopularItems) {
+	 * System.out.println(webElement.getText()); } }
+	 */
 }
