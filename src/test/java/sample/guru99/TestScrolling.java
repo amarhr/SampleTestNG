@@ -32,7 +32,7 @@ public class TestScrolling {
 		// script fails you can remove the line below
 		// This will scroll down the page by 1000 pixel vertical
 		
-		core.scroll(3, "DOWN"); // scrolls three times down
+		core.scrollByPage(3, "DOWN"); // scrolls three times down
 
 		Thread.sleep(500);
 		core.scrollIntoView(guruHomePage.getSeleniumLink()); // Takes you to top
@@ -40,7 +40,7 @@ public class TestScrolling {
 		Thread.sleep(500);
 		core.scrollIntoView(guruHomePage.getBooksToRead()); // Takes you to down
 
-		core.scroll(3, "UP"); // scrolls three times UP
+		core.scrollByPage(3, "UP"); // scrolls three times UP
 
 		Thread.sleep(3000);
 		core.moveToElement(guruHomePage.getBooksToRead());

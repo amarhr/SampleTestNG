@@ -1,94 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="30.706" tests="2" errors="0" skipped="0" failures="1">
+<testsuite name="TestSuite" time="14.928" tests="1" errors="0" skipped="0" failures="1">
   <properties>
-    <property name="java.vendor" value="Eclipse OpenJ9"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\bin\compressedrefs\jclSC180\vm.jar;C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\lib\se-service.jar;C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\lib\rt.jar;C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\lib\resources.jar;C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\lib\jsse.jar;C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\lib\charsets.jar;C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\lib\jce.jar"/>
-    <property name="sun.desktop" value="windows"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.runtime.version" value="1.8.0_232-b09"/>
-    <property name="user.name" value="HAH1"/>
-    <property name="java.compiler" value="j9jit29"/>
-    <property name="os.encoding" value="UTF8"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="com.ibm.util.extralibs.properties" value=""/>
-    <property name="com.ibm.jcl.checkClassPath" value=""/>
-    <property name="user.language" value="en"/>
-    <property name="com.ibm.oti.vm.bootstrap.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\bin\compressedrefs;C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\bin"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\bin\compressedrefs;C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\bin"/>
-    <property name="classworlds.conf" value="D:\WorkspacePOM\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3265196876501283267.tmp"/>
-    <property name="jdk.extensions.version" value="8.0.232.1"/>
-    <property name="java.version" value="1.8.0_232"/>
-    <property name="user.timezone" value="Asia/Calcutta"/>
-    <property name="com.ibm.system.agent.path" value="C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\bin"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="com.ibm.zero.version" value="2"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\lib\endorsed"/>
-    <property name="com.ibm.oti.vm.library.version" value="29"/>
-    <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="file.separator" value="\"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="52.0"/>
-    <property name="user.country" value="US"/>
-    <property name="java.home" value="C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre"/>
-    <property name="java.vm.info" value="JRE 1.8.0 Windows 10 amd64-64-Bit Compressed References 20191106_498 (JIT enabled, AOT enabled)&#10;OpenJ9   - 77c1cf708&#10;OMR      - 20db4fbc1&#10;JCL      - 3504dff40aa based on jdk8u232-b09"/>
-    <property name="os.version" value="10.0"/>
-    <property name="java.awt.fonts" value=""/>
-    <property name="path.separator" value=";"/>
-    <property name="java.vm.version" value="openj9-0.17.0"/>
-    <property name="user.variant" value=""/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
-    <property name="jdk.extensions.name" value="Extensions for OpenJDK for Eclipse OpenJ9"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
-    <property name="ibm.signalhandling.sigint" value="true"/>
-    <property name="user.home" value="C:\Users\hah1"/>
-    <property name="com.ibm.cpu.endian" value="little"/>
-    <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="ibm.signalhandling.sigchain" value="true"/>
-    <property name="java.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\bin\compressedrefs;C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-11.0.11/bin/server;C:/Program Files/Java/jdk-11.0.11/bin;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\JARS\geckodriver-v0.20.1-win64\geckodriver.exe;C:\Program Files\nodejs\;D:\WorkspacePOM\CucumberJVMExamples-master\cucumberjvm-selenium-page-object\chromedriver.exe;C:\Program Files\Perforce;D:\JARS\geckodriver-v0.14.0-win64\geckodriver.exe;C:\Program Files (x86)\BIOVIA\BIOVIA Workbook Client Manager\bin\NotebookClientManager.exe;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;D:\AZ\Terraform;C:\Program Files\dotnet\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Java\jdk-11.0.11\bin;C:\Users\hah1\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\hah1\AppData\Local\Programs\Python\Python36\;C:\Users\hah1\AppData\Local\Microsoft\WindowsApps;D:\JARS\geckodriver.exe;C:\Users\hah1\AppData\Roaming\npm;C:\Users\hah1\AppData\Local\Programs\Fiddler;C:\Users\hah1\AppData\Local\atom\bin;D:\JARS\geckodriver-v0.20.1-win64\geckodriver.exe;C:\Users\hah1\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\hah1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\hah1\.dotnet\tools;;C:\WINDOWS\system32;;."/>
-    <property name="java.vendor.url" value="http://www.eclipse.org/openj9"/>
-    <property name="java.vm.vendor" value="Eclipse OpenJ9"/>
-    <property name="java.fullversion" value="1.8.0_232-b09&#10;JRE 1.8.0 Windows 10 amd64-64-Bit Compressed References 20191106_498 (JIT enabled, AOT enabled)&#10;OpenJ9   - 77c1cf708&#10;OMR      - 20db4fbc1&#10;JCL      - 3504dff40aa based on jdk8u232-b09"/>
-    <property name="maven.home" value="D:\WorkspacePOM\SampleTestNG\EMBEDDED"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
-    <property name="java.class.path" value="C:\Users\hah1\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.16.0.20200610-1735\jars\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.version" value="16.0.1+9-24"/>
+    <property name="sun.boot.library.path" value="C:\Users\rekha\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="F:\Java\Workspace\SampleTestNG"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.vm.specification.version" value="1.8"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="java.io.tmpdir" value="C:\Users\hah1\AppData\Local\Temp\"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\WorkspacePOM\SampleTestNG"/>
-    <property name="ibm.system.encoding" value="Cp1252"/>
+    <property name="user.dir" value="F:\Java\Workspace\SampleTestNG"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="16.0.1+9-24"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="ibm.signalhandling.rs" value="false"/>
-    <property name="java.ext.dirs" value="C:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-openj9\jre\lib\ext"/>
-    <property name="user.dir" value="D:\WorkspacePOM\SampleTestNG"/>
+    <property name="java.io.tmpdir" value="C:\Users\rekha\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.name" value="Eclipse OpenJ9 VM"/>
-    <property name="com.ibm.oti.shared.enabled" value="false"/>
-    <property name="com.ibm.vm.bitmode" value="64"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="F:\Java\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf18042940230967238120.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\rekha\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Users/rekha/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin/server;C:/Users/rekha/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;%JAVAJ_HOME%\bin;C:\Program Files (x86)\Java\jdk1.8.0_291\bin;C:\Program Files\Git\cmd;C:\Users\rekha\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.2\bin;;C:\Users\rekha\AppData\Local\Programs\Microsoft VS Code\bin;C:\windows\system32;;."/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="60.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\rekha"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
     <property name="file.encoding" value="Cp1252"/>
-    <property name="com.ibm.oti.configuration" value="scar"/>
-    <property name="java.specification.version" value="1.8"/>
+    <property name="java.specification.version" value="16"/>
+    <property name="user.name" value="rekha"/>
+    <property name="java.class.path" value="C:\Users\rekha\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.18.0.20210603-1206\jars\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="16"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
+    <property name="java.home" value="C:\Users\rekha\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="16.0.1"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="F:\Java\Workspace\SampleTestNG\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="TestScrollUsingActions" classname="sample.guru99.TestScrolling" time="13.323"/>
-  <testcase name="TestScrollUsingJS" classname="sample.guru99.TestScrolling" time="17.383">
-    <failure message="Session ID is null. Using WebDriver after calling quit()?&#10;Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;&#10;System info: host: &apos;HAH1W10BLR&apos;, ip: &apos;10.201.133.151&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_232&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+  <testcase name="testScroll" classname="sample.tests.TestAPHome" time="14.928">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button/span[text()=&apos;Login&apos;]/..&quot;}&#10;  (Session info: chrome=91.0.4472.164)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;&#10;System info: host: &apos;LAPTOP-TG0KRG92&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}), userDataDir=C:\Users\rekha\AppData\Local\Temp\scoped_dir15716_1861202442}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:65443}, acceptInsecureCerts=false, browserVersion=91.0.4472.164, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]&#10;Session ID: fdc30b7590809468a532e2a5a5530ed3&#10;*** Element info: {Using=xpath, value=//button/span[text()=&apos;Login&apos;]/..}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button/span[text()='Login']/.."}
+  (Session info: chrome=91.0.4472.164)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'HAH1W10BLR', ip: '10.201.133.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_232'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+System info: host: 'LAPTOP-TG0KRG92', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}), userDataDir=C:\Users\rekha\AppData\Local\Temp\scoped_dir15716_1861202442}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:65443}, acceptInsecureCerts=false, browserVersion=91.0.4472.164, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: fdc30b7590809468a532e2a5a5530ed3
+*** Element info: {Using=xpath, value=//button/span[text()='Login']/..}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:703)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:631)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:593)
-	at core.util.SeleniumCore.moveToElement(SeleniumCore.java:29)
-	at sample.guru99.TestScrolling.TestScrollUsingJS(TestScrolling.java:47)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy7.sendKeys(Unknown Source)
+	at sample.tests.TestAPHome.testScroll(TestAPHome.java:123)
 </failure>
+    <system-out><![CDATA[openBrowser()---------------------------------
+Instantiating chrome---------------------------------
+openBrowser()---------------------------------
+Instantiating chrome---------------------------------
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 28511
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 19, 2021 10:34:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 18882
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 19, 2021 10:34:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
   </testcase>
 </testsuite>

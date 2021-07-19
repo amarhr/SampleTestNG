@@ -1,6 +1,5 @@
 package sample.tests.parallel;
 
-import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
