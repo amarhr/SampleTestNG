@@ -2,32 +2,32 @@
 <testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-19T23:39:53 IST" name="Default suite" finished-at="2021-07-19T23:40:29 IST" duration-ms="36339">
+  <suite started-at="2021-07-21T15:36:44 IST" name="Default suite" finished-at="2021-07-21T15:37:00 IST" duration-ms="16105">
     <groups>
     </groups>
-    <test started-at="2021-07-19T23:39:53 IST" name="Default test" finished-at="2021-07-19T23:40:29 IST" duration-ms="36339">
+    <test started-at="2021-07-21T15:36:44 IST" name="Default test" finished-at="2021-07-21T15:37:00 IST" duration-ms="16105">
       <class name="sample.tests.TestAPHome">
-        <test-method signature="testScroll()[pri:0, instance:sample.tests.TestAPHome@606e4010]" started-at="2021-07-19T23:39:53 IST" name="testScroll" finished-at="2021-07-19T23:40:26 IST" duration-ms="33021" status="PASS">
+        <test-method signature="testScroll()[pri:0, instance:sample.tests.TestAPHome@18271936]" started-at="2021-07-21T15:36:44 IST" name="testScroll" finished-at="2021-07-21T15:37:00 IST" duration-ms="15657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testScroll -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:sample.tests.TestAPHome@606e4010]" started-at="2021-07-19T23:40:26 IST" name="afterTest" finished-at="2021-07-19T23:40:29 IST" duration-ms="3253" status="FAIL">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:sample.tests.TestAPHome@18271936]" started-at="2021-07-21T15:37:00 IST" name="afterTest" finished-at="2021-07-21T15:37:00 IST" duration-ms="362" status="FAIL">
           <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
               <![CDATA[Error communicating with the remote browser. It may have died.
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'LAPTOP-TG0KRG92', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: driver.version: RemoteWebDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}), userDataDir=C:\Users\rekha\AppData\Local\Temp\scoped_dir12784_701371353}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58979}, acceptInsecureCerts=false, browserVersion=91.0.4472.164, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 359f91edfedd136a593a443e19948bdf]]>
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}), userDataDir=C:\Users\rekha\AppData\Local\Temp\scoped_dir5396_513639022}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60622}, acceptInsecureCerts=false, browserVersion=91.0.4472.164, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 774586b49170d72dd8707840abed2113]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'LAPTOP-TG0KRG92', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: driver.version: RemoteWebDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}), userDataDir=C:\Users\rekha\AppData\Local\Temp\scoped_dir12784_701371353}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58979}, acceptInsecureCerts=false, browserVersion=91.0.4472.164, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 359f91edfedd136a593a443e19948bdf
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}), userDataDir=C:\Users\rekha\AppData\Local\Temp\scoped_dir5396_513639022}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60622}, acceptInsecureCerts=false, browserVersion=91.0.4472.164, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 774586b49170d72dd8707840abed2113
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
 at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
@@ -80,7 +80,7 @@ Caused by: java.lang.RuntimeException: Couldn't detect pid
 at org.openqa.selenium.os.ProcessUtils.getProcessId(ProcessUtils.java:195)
 at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:128)
 ... 44 more
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final long java.lang.ProcessImpl.handle accessible: module java.base does not "opens java.lang" to unnamed module @9f70c54
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final long java.lang.ProcessImpl.handle accessible: module java.base does not "opens java.lang" to unnamed module @2096442d
 at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
 at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
 at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:177)
