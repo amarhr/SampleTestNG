@@ -4,20 +4,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-
 
 import core.util.SeleniumCore;
 
@@ -50,14 +45,12 @@ public class TestAPHome {
 		TakesScreenshot takeSS = (TakesScreenshot) driver;
 		File src = takeSS.getScreenshotAs(OutputType.FILE);
 
-		try {
-			Random random = new Random();
-			int randomNumber = random.nextInt(10000);
-			FileUtils.copyFile(src,
-					new File(System.getProperty("user.dir") + "//screenshots//BorderUsername" + randomNumber));
-		} catch (IOException io) {
-			io.printStackTrace();
-		}
+		/*
+		 * try { Random random = new Random(); int randomNumber = random.nextInt(10000);
+		 * // FileUtils.copyFile(src, // new File(System.getProperty("user.dir") +
+		 * "//screenshots//BorderUsername" + randomNumber)); } catch (IOException io) {
+		 * io.printStackTrace(); }
+		 */
 	}
 	
 	// @BeforeMethod
@@ -68,6 +61,6 @@ public class TestAPHome {
 
 	@AfterMethod
 	public void afterTest() {
-		driver.quit();
+		// driver.quit();
 	}
 }
