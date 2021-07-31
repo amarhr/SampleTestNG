@@ -8,7 +8,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -17,31 +16,29 @@ public class TestPriority {
 	WebDriver driver;
 
 	@Parameters({ "browserType" })
-	//@BeforeClass
+	@BeforeClass
 	public void OpenBrowser(String browserType) {
-
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver.exe");
-		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\JARS\\geckodriver.exe");
-		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\JARS\\IEDriverServer.exe");
-		
 		DesiredCapabilities caps = null;
-		
+
 		switch (browserType) {
-			case "Firefox":
-				caps = DesiredCapabilities.firefox();
-				caps.setCapability("ignoreZoomSetting", true);
-				driver = new FirefoxDriver();
-				break;
-			case "Chrome":
-				caps = DesiredCapabilities.chrome();
-				caps.setCapability("ignoreZoomSetting", true);
-				driver = new ChromeDriver();
-				break;
-			case "IE":
-				caps = DesiredCapabilities.internetExplorer();
-				caps.setCapability("ignoreZoomSetting", true);
-				driver = new InternetExplorerDriver(caps);
-				break;
+		case "Firefox":
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\JARS\\geckodriver.exe");
+			caps = DesiredCapabilities.firefox();
+			caps.setCapability("ignoreZoomSetting", true);
+			driver = new FirefoxDriver();
+			break;
+		case "Chrome":
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver.exe");
+			caps = DesiredCapabilities.chrome();
+			caps.setCapability("ignoreZoomSetting", true);
+			driver = new ChromeDriver();
+			break;
+		case "IE":
+			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\JARS\\IEDriverServer.exe");
+			caps = DesiredCapabilities.internetExplorer();
+			caps.setCapability("ignoreZoomSetting", true);
+			driver = new InternetExplorerDriver(caps);
+			break;
 		}
 
 		driver.manage().deleteAllCookies();
@@ -82,11 +79,11 @@ public class TestPriority {
 	public void quit() {
 		System.out.println("-------------------------------------------");
 		// System.out.println("Exiting the driver after method");
-		//driver.quit();
+		// driver.quit();
 	}
-	
+
 	@AfterSuite
 	public void afterSuite() {
-		
+
 	}
 }

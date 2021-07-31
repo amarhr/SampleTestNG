@@ -78,7 +78,7 @@ public class ParallelSuiteTest {
 		long id = Thread.currentThread().getId();
 		System.out.println("Sample " + testName + ". Thread: " + id);
 		
-		System.setProperty("webdriver.chrome.driver", "D:\\JARS\\chromedriver41.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://www.google.com");
 		
@@ -92,7 +92,7 @@ public class ParallelSuiteTest {
 		long id = Thread.currentThread().getId();
 		System.out.println("Sample testMethod10. Thread: " + id);
 		
-		System.setProperty("webdriver.chrome.driver", "D:\\JARS\\chromedriver41.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://www.youtube.com");
 		

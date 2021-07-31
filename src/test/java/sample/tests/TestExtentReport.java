@@ -1,56 +1,29 @@
 package sample.tests;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.ChartLocation;
-import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.core.tests.TestBase;
 
-public class TestExtentReport {
-	private WebDriver driver;
-	ExtentHtmlReporter htmlReporter;
-	private ExtentReports extent;
-	ExtentTest logger;
+public class TestExtentReport extends TestBase {
+	/*
+	 * private WebDriver driver; ExtentHtmlReporter htmlReporter; private
+	 * ExtentReports extent; ExtentTest logger;
+	 */
 
-	@BeforeSuite
-	public void beforeSuite() {
-		ExtentHtmlReporter htmlReporter;
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/STMExtentReport.html");
-		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
-		extent.setSystemInfo("Host Name", "SoftwareTestingMaterial");
-		extent.setSystemInfo("Environment", "Automation Testing");
-		extent.setSystemInfo("User Name", "Amarnath H R");
-
-		htmlReporter.config().setDocumentTitle("Title of the Report Comes here");
-		htmlReporter.config().setReportName("Name of the Report Comes here");
-		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-		htmlReporter.config().setTheme(Theme.STANDARD);
-	}
-
-	@Test(dependsOnMethods = "openBrowser", enabled = true)
+	// @Test(dependsOnMethods = "openBrowser", enabled = true)
+	@Test
 	public void testScroll() throws InterruptedException {
 		logger = extent.createTest("testScroll");
 		driver.get("https://www.flipkart.com/");
@@ -61,7 +34,6 @@ public class TestExtentReport {
 			// driver.wait(1000);
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -71,7 +43,7 @@ public class TestExtentReport {
 		String title = js.executeScript("return document.title;").toString();
 		System.out.println(driver.getTitle());
 		Assert.assertEquals(title,
-				"Online Shopping Site for Mobiles, Fashion, Books, Electronics, Home Appliances and More");
+				"Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!");
 
 		try {
 			// driver.wait(1000);
@@ -94,11 +66,11 @@ public class TestExtentReport {
 		WebElement searchBox = driver.findElement(By.xpath("//a[@title='Electronics']"));
 		js.executeScript("arguments[0].scrollIntoView(true);", searchBox);
 		Thread.sleep(5000);
-		
+
 		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testScroll", ExtentColor.GREEN));
 	}
 
-	@Test(dependsOnMethods = "openBrowser", enabled = true)
+	@Test(dependsOnMethods = "openBrowser", enabled = false)
 	public void testStaleElementReferenceException() {
 		logger = extent.createTest("testStaleElementReferenceException");
 		driver.get("https://www.flipkart.com/");
@@ -116,10 +88,11 @@ public class TestExtentReport {
 			System.out.println("MESSAGE : " + staleObj.getMessage());
 			Assert.assertEquals(staleObj.getClass(), StaleElementReferenceException.class);
 		}
-		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testStaleElementReferenceException", ExtentColor.GREEN));
+		logger.log(Status.PASS,
+				MarkupHelper.createLabel("Test Case Passed is testStaleElementReferenceException", ExtentColor.GREEN));
 	}
 
-	@Test(dependsOnMethods = "openBrowser", enabled = true)
+	@Test(dependsOnMethods = "openBrowser", enabled = false)
 	public void testheadless() {
 		logger = extent.createTest("testheadless");
 		driver.get("https://www.flipkart.com/");
@@ -140,41 +113,6 @@ public class TestExtentReport {
 		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is testheadless", ExtentColor.GREEN));
 	}
 
-	@Test
-	public void openBrowser() {
-		logger = extent.createTest("openBrowser");
-		String browserType = "Chrome";
-
-		System.setProperty("webdriver.chrome.driver", "D:\\JARS\\chromedriver239.exe");
-		System.setProperty("webdriver.gecko.driver", "D:\\JARS\\geckodriver.exe");
-		System.setProperty("webdriver.ie.driver", "D:\\JARS\\IEDriverServer312.exe");
-
-		DesiredCapabilities caps = null;
-
-		switch (browserType) {
-		case "Firefox":
-			caps = DesiredCapabilities.firefox();
-			caps.setCapability("ignoreZoomSetting", true);
-			driver = new FirefoxDriver();
-			break;
-		case "Chrome":
-			caps = DesiredCapabilities.chrome();
-			caps.setCapability("ignoreZoomSetting", true);
-			driver = new ChromeDriver();
-			break;
-		case "IE":
-			caps = DesiredCapabilities.internetExplorer();
-			caps.setCapability("ignoreZoomSetting", true);
-			driver = new InternetExplorerDriver(caps);
-			break;
-		}
-
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is openBrowser", ExtentColor.GREEN));
-	}
-	
 	@AfterMethod
 	public void getResult(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {

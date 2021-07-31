@@ -15,7 +15,7 @@
 
 		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title></title>
+	<title>Title of the Report Comes here</title>
 
 	<style type='text/css'>
 	</style>
@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jul 17, 2021 11:52:34 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Jul 29, 2021 12:15:32 PM</span>
 				</a>
 			</li>
 			<li>
@@ -72,6 +72,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -122,10 +123,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -137,10 +138,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>1</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -158,14 +159,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>openBrowser</span>
-						<span class='test-time'>Jul 17, 2021 11:52:34 PM</span>
+						<span class='test-time'>Jul 29, 2021 12:15:33 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jul 17, 2021 11:52:34 PM</span>
-	<span class='label end-time'>Jul 17, 2021 11:52:35 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+591ms</span>
+	<span class='label start-time'>Jul 29, 2021 12:15:33 PM</span>
+	<span class='label end-time'>Jul 29, 2021 12:15:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+791ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -179,13 +180,8 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:52:35 PM</td>
-					<td class='step-details'>Test Case TestAPHome.openBrowser()[pri:0, instance:sample.tests.TestAPHome@1ce24091] Status is passed</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:52:35 PM</td>
-					<td class='step-details'><span class='label white-text green'>Test Case openBrowser Status is passed</span></td>
+					<td class='timestamp'>12:15:36 PM</td>
+					<td class='step-details'><span class='label white-text green'>Test Case Passed is openBrowser</span></td>
 				</tr>
 			</tbody>
 		</table>
@@ -194,17 +190,17 @@
 				</li>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>TestAPTitle</span>
-						<span class='test-time'>Jul 17, 2021 11:52:35 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>testScroll</span>
+						<span class='test-time'>Jul 29, 2021 12:15:36 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jul 17, 2021 11:52:35 PM</span>
-	<span class='label end-time'>Jul 17, 2021 11:52:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+853ms</span>
+	<span class='label start-time'>Jul 29, 2021 12:15:36 PM</span>
+	<span class='label end-time'>Jul 29, 2021 12:16:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 38s+697ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -216,15 +212,23 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:52:56 PM</td>
-					<td class='step-details'>Test Case TestAPHome.TestAPTitle()[pri:0, instance:sample.tests.TestAPHome@1ce24091] Status is passed</td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:16:15 PM</td>
+					<td class='step-details'><span class='label white-text red'>testScroll - Test Case Failed</span></td>
 				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:52:56 PM</td>
-					<td class='step-details'><span class='label white-text green'>Test Case TestAPTitle Status is passed</span></td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:16:15 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Electronics']"}
+  (Session info: chrome=92.0.4515.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HAH1W10BLR', ip: '172.31.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_232'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\hah1\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60438}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c5e7d8172b45c020dc4ff32edec67aed
+*** Element info: {Using=xpath, value=//a[@title='Electronics']} - Test Case Failed</span></td>
 				</tr>
 			</tbody>
 		</table>
@@ -272,25 +276,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jul 17, 2021 11:52:34 PM</div>
+					<div class='panel-lead'>Jul 29, 2021 12:15:32 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jul 17, 2021 11:52:57 PM</div>
+			 		<div class='panel-lead'>Jul 29, 2021 12:16:16 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 23s+116ms</div>
+					<div class='panel-lead'>0h 0m 43s+746ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -303,16 +307,16 @@
 							<th>Value</th>
 						</tr>
 							<tr>
-								<td>Host</td>
-								<td>Samples</td>
-							</tr>
-							<tr>
-								<td>Author</td>
-								<td>Amarnath H R</td>
+								<td>Host Name</td>
+								<td>SoftwareTestingMaterial</td>
 							</tr>
 							<tr>
 								<td>Environment</td>
 								<td>Automation Testing</td>
+							</tr>
+							<tr>
+								<td>User Name</td>
+								<td>Amarnath H R</td>
 							</tr>
 					</table>
 				</div>
@@ -327,22 +331,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 2,
-				failParent: 0,
+				passParent: 1,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 4,
-				failChild: 0,
+				passChild: 1,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 2,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

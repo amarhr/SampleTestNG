@@ -1,10 +1,34 @@
 package sample.tests;
 
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TestGrouping {
+	@BeforeTest
+	public void beforeTest() { 
+		System.out.println("**Before <test> - Runs before the test tag");
+	}
+
+	@AfterTest
+	public void afterTest() {
+		System.out.println("*After <test> - Runs after the test tag");
+	}
+	
+	@BeforeMethod
+	public void beforeMethod() {
+		//System.out.println("I run before every method/test in the class");
+		System.out.println("*Before Test Method - @Test");
+		//System.out.println();
+	}
+	
+	@BeforeMethod
+	public void afterMethod() {
+		System.out.println("*After Test Method - @Test");
+		System.out.println();
+	}
+
 	@Test(groups = { "Terrestrial", "Mammal" })
 	public void dog() {
 		System.out.println("I am dog, I live on LAND");
@@ -43,13 +67,5 @@ public class TestGrouping {
 	@Test(groups= { "Aquatic", "Mammal"})
 	public void whale() {
 		System.out.println("I am whale, I live in WATER");
-	}
-
-	@BeforeTest
-	public void beforeTest() {
-	}
-
-	@AfterTest
-	public void afterTest() {
 	}
 }

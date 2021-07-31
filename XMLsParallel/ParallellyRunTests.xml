@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--  Running the tests in the class sample.tests.TestPriority parallelly. Maximum 2 tests at a time.-->
+<suite name="Suite"  parallel="tests" thread-count="2">
+	<listeners>
+		<listener class-name="sample.listener.Listener"></listener>
+	</listeners>
+	<test name="TestChrome">
+		<parameter name="browserType" value="Chrome"></parameter>
+		<classes >
+			<class name="sample.tests.TestPriority" />
+		</classes>
+	</test>
+	
+	<test name="TestIE">
+		<parameter name="browserType" value="IE"></parameter>
+		<classes >
+			<class name="sample.tests.TestPriority" />
+		</classes>
+	</test>
+	
+	<test name="TestFirefox">
+		<parameter name="browserType" value="Firefox"></parameter>
+		<classes >
+			<class name="sample.tests.TestPriority" />
+		</classes>
+	</test>
+	
+	<!-- 
+	How to run all the tests from the package
+	<test thread-count="5" name="TestIE">
+		<parameter name="browserType" value="IE"></parameter>
+		<packages>
+			<package name="sample.tests"></package>
+		</packages>
+	</test> -->
+</suite>

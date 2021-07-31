@@ -58,7 +58,7 @@
 		</classes>
 	</test>
 
-	<test thread-count="5" name="Amphibian">
+	<!--  <test thread-count="5" name="Amphibian">
 		<method-selectors>
 		    <method-selector>
 		      <script language="beanshell"><![CDATA[
@@ -76,7 +76,7 @@
 		<classes>
 			<class name="sample.tests.TestGrouping" />
 		</classes>
-	</test>
+	</test>  -->
 	
 	<test name="Mammal">
 		<groups>

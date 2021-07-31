@@ -3,8 +3,6 @@ package sample.guru99;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -25,7 +23,7 @@ public class TestScrolling {
 
 	@Test
 	public void TestScrollUsingJS() throws InterruptedException {
-		GuruHomePage guruHomePage = PageFactory.initElements(driver, GuruHomePage.class);
+		GuruHomePage guruHomePage = new GuruHomePage(core);
 
 		// Launch the application
 		// To maximize the window. This code may not work with Selenium 3 jars. If
@@ -49,7 +47,7 @@ public class TestScrolling {
 
 	@Test
 	public void TestScrollUsingActions() throws InterruptedException {
-		GuruHomePage guruHomePage = PageFactory.initElements(driver, GuruHomePage.class);
+		GuruHomePage guruHomePage = new GuruHomePage(core);
 
 		Thread.sleep(3000);
 		core.moveToElement(guruHomePage.getBooksToRead());

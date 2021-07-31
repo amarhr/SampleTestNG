@@ -26,7 +26,8 @@ public class SeleniumCore {
 	private JavascriptExecutor js;
 
 	public SeleniumCore() {
-		File chromeExe = new File("F:/JARS/chromedriver91.exe");
+		// System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver.exe");
+		File chromeExe = new File(System.getProperty("user.dir") + "\\JARS\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chromeExe.getAbsolutePath());
 		openBrowser("Chrome");
 		actions = new Actions(driver);
