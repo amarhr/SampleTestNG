@@ -14,7 +14,7 @@ public class TestActions {
 	GuruHomePage guruHomePage;
 
 	public TestActions() {
-		SeleniumCore core = new SeleniumCore();
+		SeleniumCore core = new SeleniumCore("Chrome");
 		driver = core.getDriver();
 
 		driver.get("http://demo.guru99.com/test/guru99home/");

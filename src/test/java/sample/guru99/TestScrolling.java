@@ -16,7 +16,7 @@ public class TestScrolling {
 
 	@BeforeMethod
 	public void setUp() {
-		core = new SeleniumCore();
+		core = new SeleniumCore("Chrome");
 		driver = core.getDriver();
 		driver.get("http://demo.guru99.com/test/guru99home/");
 	}

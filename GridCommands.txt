@@ -1,0 +1,27 @@
+HUB
+java -jar selenium-server-standalone-3.141.59.jar -role hub
+
+NODE1:
+java -Dwebdriver.driver.chrome="F:\JARS\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://192.168.1.2:4444/grid/register -port 5566
+
+NODE2:
+java -Dwebdriver.driver.chrome="F:\JARS\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://192.168.1.2:4444/grid/register -port 5567
+
+
+
+
+https://stackoverflow.com/questions/55360697/whats-the-maximum-number-of-browsers-a-selenium-grid-node-can-run
+There is no fixed selenium grid limit, but you need to have in mind:
+
+Only one InternetExplorer can run on a single node. This is browser limitation, though, not Selenium. I am not sure if you would be able to start more than one InternetExplorer on one machine, but even if you can, when running tests on Intrenet Explorer, the window should be in focus, otherwise tests get messed up. And you can't have more than one window in focus, so if you like to run your tests on IE, you can't have more than one browser on the machine running the Internet Explorer browser.
+
+If you can run 200 browser instances on the machine without selenium, you would be probably able to run similar number of instances using selenium grid. Of course, Selenium grid itself requires some resources, but the browser itself is much more demanding, especially when you start loading pages, and doing the tests. I doubt you would be able to do that in practice.
+
+Probably it's also worth checking out headless browsers, as they may be faster and/or lighter than real browsers.
+
+Update: regarding SeleniumGrid node vs machine node.
+
+You can have more than one SeleniumGrid node(on different ports) on a single machine.
+Each SeleniumGrid node can run only one type of browser, but can have multiple instances of this browser running simultaneously.
+Again note the IE consideration from above
+

@@ -1,6 +1,5 @@
-package com.rahulshetty;
+package com.rahulshetty.tests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -18,7 +17,7 @@ public class TestRSAcademy {
 
 	@BeforeTest
 	public void setUp() {
-		core = new SeleniumCore();
+		core = new SeleniumCore("Chromeheadless");
 		driver = core.getDriver();
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
@@ -26,9 +25,9 @@ public class TestRSAcademy {
 	}
 
 	@Test
-	public void testCurrecnySelection() {
+	public void testCurrencySelection() {
 		rsHomePage.selectCurrencyByIndex(3);
-		rsHomePage.verifySelectedCurrency("USD");
+		rsHomePage.verifySelectedCurrencyIs("USD");
 		
 		core.hardWait(2);
 		rsHomePage.selectCurrencyByVisibleText("Select");
@@ -38,14 +37,15 @@ public class TestRSAcademy {
 		core.hardWait(2);
 
 		rsHomePage.selectCurrencyByVisibleText("INR");
-		rsHomePage.verifySelectedCurrency("INR");
+		rsHomePage.verifySelectedCurrencyIs("INR");
 		
 		core.hardWait(2);
 		rsHomePage.selectCurrencyByVisibleText("Select");
 		core.hardWait(2);
 
 		rsHomePage.selectCurrencyByValue("AED");
-		rsHomePage.verifySelectedCurrency("AED");
+		rsHomePage.verifySelectedCurrencyIs("AED");
+		
 		rsHomePage.selectCurrencyByVisibleText("Select");
 
 		core.hardWait(2);

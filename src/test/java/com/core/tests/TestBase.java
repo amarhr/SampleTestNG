@@ -1,5 +1,7 @@
 package com.core.tests;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -21,6 +23,7 @@ public class TestBase {
 	protected ExtentReports extent;
 	protected ExtentTest logger;
 	protected SeleniumCore core;
+	private static final Logger LOGGER = LogManager.getLogger(SeleniumCore.class.getName());
 
 	@BeforeSuite
 	public void beforeSuite() {
@@ -44,27 +47,9 @@ public class TestBase {
 		logger = extent.createTest("openBrowser");
 		String browserType = "Chrome";
 
-		core = new SeleniumCore();
+		core = new SeleniumCore(browserType);
 		driver = core.getDriver();
 
-		/*
-		 * System.setProperty("webdriver.chrome.driver", "D:\\JARS\\chromedriver.exe");
-		 * System.setProperty("webdriver.gecko.driver", "D:\\JARS\\geckodriver.exe");
-		 * System.setProperty("webdriver.ie.driver", "D:\\JARS\\IEDriverServer.exe");
-		 * 
-		 * DesiredCapabilities caps = null;
-		 * 
-		 * switch (browserType) { case "Firefox": caps = DesiredCapabilities.firefox();
-		 * caps.setCapability("ignoreZoomSetting", true); driver = new FirefoxDriver();
-		 * break; case "Chrome": caps = DesiredCapabilities.chrome();
-		 * caps.setCapability("ignoreZoomSetting", true); driver = new ChromeDriver();
-		 * break; case "IE": caps = DesiredCapabilities.internetExplorer();
-		 * caps.setCapability("ignoreZoomSetting", true); driver = new
-		 * InternetExplorerDriver(caps); break; }
-		 * 
-		 * driver.manage().deleteAllCookies(); driver.manage().window().maximize();
-		 * driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		 */
 		logger.log(Status.PASS, MarkupHelper.createLabel("Test Case Passed is openBrowser", ExtentColor.GREEN));
 	}
 }

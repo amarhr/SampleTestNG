@@ -22,7 +22,7 @@ public class NewTest {
 		String title = driver.getTitle();				 
 		Assert.assertTrue(title.contains("Guru99 Bank Home Page"));
 	}*/
-
+	
 	public WebDriver OpenBrowser(String browserType) {
 		// String browserType = "FFWinHeadless";
 		FirefoxOptions ffOptions = null;

@@ -18,7 +18,7 @@ public class TestPopularTags {
 	GuruHomePage guruHomePage;
 
 	public TestPopularTags() {
-		SeleniumCore core = new SeleniumCore();
+		SeleniumCore core = new SeleniumCore("Chrome");
 		driver = core.getDriver();
 		driver.get("https://www.guru99.com/");
 		guruHomePage = PageFactory.initElements(driver, GuruHomePage.class);

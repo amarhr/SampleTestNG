@@ -55,7 +55,7 @@ public class TestAPHome {
 	
 	// @BeforeMethod
 	public void setup() {
-		core = new SeleniumCore();
+		core = new SeleniumCore("Chrome");
 		driver = core.getDriver();
 	}
 

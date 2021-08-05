@@ -1,9 +1,12 @@
 package core.util;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -11,6 +14,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -24,12 +28,12 @@ public class SeleniumCore {
 	private WebDriver driver;
 	private Actions actions;
 	private JavascriptExecutor js;
+	private static final Logger LOGGER = LogManager.getLogger(SeleniumCore.class.getName());
 
-	public SeleniumCore() {
-		// System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\JARS\\chromedriver.exe");
+	public SeleniumCore(String browserType) {
 		File chromeExe = new File(System.getProperty("user.dir") + "\\JARS\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chromeExe.getAbsolutePath());
-		openBrowser("Chrome");
+		initializeBrowser(browserType);
 		actions = new Actions(driver);
 
 		driver.manage().window().maximize();
@@ -38,31 +42,35 @@ public class SeleniumCore {
 	public WebDriver getDriver() {
 		return driver;
 	}
-	
-	private void openBrowser(String browserType) {
-		System.out.println("openBrowser()---------------------------------");
+
+	private void initializeBrowser(String browserType) {
+		LOGGER.debug("openBrowser()");
 
 		DesiredCapabilities caps = null;
-		
-		
-		switch (browserType) {
-			case "Firefox":
-				caps = DesiredCapabilities.firefox();
-				caps.setCapability("ignoreZoomSetting", true);
-				driver = new FirefoxDriver();
-				break;
-			case "Chrome":
-				System.out.println("Instantiating chrome---------------------------------");
-				caps = DesiredCapabilities.chrome();
-				caps.setCapability("ignoreZoomSetting", true);
-				driver = new ChromeDriver();
-				
-				break;
-			case "IE":
-				caps = DesiredCapabilities.internetExplorer();
-				caps.setCapability("ignoreZoomSetting", true);
-				driver = new InternetExplorerDriver(caps);
-				break;
+
+		switch (browserType.toLowerCase()) {
+		case "firefox":
+			caps = DesiredCapabilities.firefox();
+			caps.setCapability("ignoreZoomSetting", true);
+			driver = new FirefoxDriver();
+			break;
+		case "chrome":
+			LOGGER.debug("Instantiating chrome");
+			caps = DesiredCapabilities.chrome();
+			caps.setCapability("ignoreZoomSetting", true);
+			driver = new ChromeDriver();
+
+			break;
+		case "chromeheadless":
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("headless");
+			driver = new ChromeDriver(options);
+			break;
+		case "ie":
+			caps = DesiredCapabilities.internetExplorer();
+			caps.setCapability("ignoreZoomSetting", true);
+			driver = new InternetExplorerDriver();
+			break;
 		}
 
 		driver.manage().deleteAllCookies();
@@ -71,7 +79,7 @@ public class SeleniumCore {
 	}
 
 	public void moveToElement(WebElement element) throws InterruptedException {
-		Thread.sleep(5000);
+		hardWait(5);
 		actions.moveToElement(element).perform();
 	}
 
@@ -108,37 +116,34 @@ public class SeleniumCore {
 		js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0,document.body.scrollHeight);");
 	}
-	
+
 	public String getPageTitleUsingJS() {
 		return js.executeScript("return document.title;").toString();
 	}
-	
+
 	public void hardWait(int seconds) {
 		try {
 			// driver.wait(seconds * 1000);
 			// https://stackoverflow.com/questions/5858743/driver-wait-throws-illegalmonitorstateexception
-			synchronized (driver)
-			{
-			    driver.wait(seconds * 1000);
+			synchronized (driver) {
+				driver.wait(seconds * 1000);
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public WebElement waitForElement(By byObj, int seconds) {
 		WebDriverWait wait = new WebDriverWait(driver, seconds * 1000);
 		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(byObj));
 		return element;
 	}
-	
-	public WebElement waitFluentlyForElement(By byObj) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)							
-				.withTimeout(30, TimeUnit.SECONDS) 			
-				.pollingEvery(5, TimeUnit.SECONDS) 			
-				.ignoring(NoSuchElementException.class);
-		WebElement element = wait.until(new Function<WebDriver, WebElement>(){
-			public WebElement apply(WebDriver driver ) {
+
+	public WebElement waitFluentlyForElement(By byObj, int seconds) {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(seconds))
+				.pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
+		WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+			public WebElement apply(WebDriver driver) {
 				return driver.findElement(byObj);
 			}
 		});
@@ -147,5 +152,9 @@ public class SeleniumCore {
 
 	public void quit() {
 		driver.quit();
+	}
+
+	public void close() {
+		driver.close();
 	}
 }

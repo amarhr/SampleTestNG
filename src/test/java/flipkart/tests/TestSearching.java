@@ -15,6 +15,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
 import com.flipkart.pages.FlipkartHomePage;
 
 import core.util.SeleniumCore;
@@ -111,7 +112,7 @@ public class TestSearching {
 	
 	@Test(enabled = true)
 	public void testScroll() throws InterruptedException {
-		core = new SeleniumCore();
+		core = new SeleniumCore("Chrome");
 		driver = core.getDriver();
 		driver.get("https://www.flipkart.com/");
 		FlipkartHomePage flipKartHomePage = new FlipkartHomePage(driver); // PageFactory.initElements(driver, FlipkartHomePage.class);

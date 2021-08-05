@@ -1,68 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Test-class Suite" duration-ms="18365" started-at="2021-07-29T12:20:36 IST" finished-at="2021-07-29T12:20:54 IST">
+  <suite started-at="2021-08-04T14:59:32 IST" name="Default suite" finished-at="2021-08-04T14:59:51 IST" duration-ms="19379">
     <groups>
     </groups>
-    <test name="Test-class test 1" duration-ms="18365" started-at="2021-07-29T12:20:36 IST" finished-at="2021-07-29T12:20:54 IST">
-      <class name="sample.tests.parallel.ParallelSuiteTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="beforeSuite" is-config="true" duration-ms="139" started-at="2021-07-29T12:20:36 IST" finished-at="2021-07-29T12:20:36 IST">
+    <test started-at="2021-08-04T14:59:32 IST" name="Default test" finished-at="2021-08-04T14:59:51 IST" duration-ms="19379">
+      <class name="com.rahulshetty.tests.TestRSAcademy">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.rahulshetty.tests.TestRSAcademy@7fee8714]" started-at="2021-08-04T14:59:32 IST" name="setUp" finished-at="2021-08-04T14:59:39 IST" duration-ms="7357" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="beforeTest" is-config="true" duration-ms="8" started-at="2021-07-29T12:20:36 IST" finished-at="2021-07-29T12:20:36 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TestOne]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCurrencySelection()[pri:0, instance:com.rahulshetty.tests.TestRSAcademy@7fee8714]" started-at="2021-08-04T14:59:39 IST" name="testCurrencySelection" finished-at="2021-08-04T14:59:50 IST" duration-ms="11192" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="beforeClass" is-config="true" duration-ms="0" started-at="2021-07-29T12:20:36 IST" finished-at="2021-07-29T12:20:36 IST">
+        </test-method> <!-- testCurrencySelection -->
+        <test-method signature="testPassengersSelection()[pri:0, instance:com.rahulshetty.tests.TestRSAcademy@7fee8714]" started-at="2021-08-04T14:59:50 IST" name="testPassengersSelection" finished-at="2021-08-04T14:59:51 IST" duration-ms="552" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2021-07-29T12:20:36 IST" finished-at="2021-07-29T12:20:36 IST">
+        </test-method> <!-- testPassengersSelection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.rahulshetty.tests.TestRSAcademy@7fee8714]" started-at="2021-08-04T14:59:51 IST" name="tearDown" finished-at="2021-08-04T14:59:51 IST" duration-ms="198" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2021-07-29T12:20:36 IST" finished-at="2021-07-29T12:20:36 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testMethod()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="testMethod" duration-ms="17247" started-at="2021-07-29T12:20:36 IST" finished-at="2021-07-29T12:20:53 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethod -->
-        <test-method status="PASS" signature="testMethod10()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="testMethod10" duration-ms="18301" started-at="2021-07-29T12:20:36 IST" finished-at="2021-07-29T12:20:54 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethod10 -->
-        <test-method status="PASS" signature="aftermethod()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="aftermethod" is-config="true" duration-ms="2" started-at="2021-07-29T12:20:53 IST" finished-at="2021-07-29T12:20:53 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method status="PASS" signature="aftermethod()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="aftermethod" is-config="true" duration-ms="1" started-at="2021-07-29T12:20:54 IST" finished-at="2021-07-29T12:20:54 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-07-29T12:20:54 IST" finished-at="2021-07-29T12:20:54 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-07-29T12:20:54 IST" finished-at="2021-07-29T12:20:54 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:sample.tests.parallel.ParallelSuiteTest@dc05fb48]" name="afterSuite" is-config="true" duration-ms="868" started-at="2021-07-29T12:20:56 IST" finished-at="2021-07-29T12:20:57 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- sample.tests.parallel.ParallelSuiteTest -->
-    </test> <!-- Test-class test 1 -->
-  </suite> <!-- Test-class Suite -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.rahulshetty.tests.TestRSAcademy -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -66,7 +66,7 @@ public class RSAcademyHomePage {
 		return CurrencyDropDown().getFirstSelectedOption().getText();
 	}
 
-	public void verifySelectedCurrency(String expectedCurrency) {
+	public void verifySelectedCurrencyIs(String expectedCurrency) {
 		String selectedOption = getSelectedCurrency();
 		Assert.assertEquals(expectedCurrency, selectedOption);
 	}
