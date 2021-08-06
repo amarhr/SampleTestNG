@@ -34,11 +34,12 @@
 			<artifactId>extentreports</artifactId>
 			<version>2.41.2</version>
 		</dependency>
+		<!-- <dependency> <groupId>org.projectlombok</groupId> <artifactId>lombok</artifactId> 
+			<version>1.18.8</version> <scope>provided</scope> </dependency> -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.8</version>
-			<scope>provided</scope>
+			<version>1.18.20</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -61,9 +62,12 @@
 					<inherited>true</inherited>
 					<configuration>
 						<suiteXmlFiles>
-							<!-- <suiteXmlFile>TestGrouping.xml</suiteXmlFile> <suiteXmlFile>TestGuru99.xml</suiteXmlFile> 
-								<suiteXmlFile>TestScrolling.xml</suiteXmlFile> -->
-							<suiteXmlFile>testng.xml</suiteXmlFile>
+							<!--<suiteXmlFile>TestGrouping.xml</suiteXmlFile>
+								<suiteXmlFile>TestGuru99.xml</suiteXmlFile> 
+								<suiteXmlFile>TestScrolling.xml</suiteXmlFile> 
+								<suiteXmlFile>testng.xml</suiteXmlFile>
+								<suiteXmlFile>TestScrolling.xml</suiteXmlFile>-->
+							<suiteXmlFile>TestGrid.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

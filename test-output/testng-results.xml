@@ -1,29 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[In onStart(ISuite arg) ===== :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ISuite arg) ===== :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestGrid.testRunInstanceOnGrid(java.lang.String,java.lang.String)[pri:0, instance:com.grid.tests.TestGrid@793be5ca]
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestGrid.testRunInstanceOnGrid(java.lang.String,java.lang.String)[pri:0, instance:com.grid.tests.TestGrid@209da20d]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestGrid.testRunInstanceOnGrid(java.lang.String,java.lang.String)[pri:0, instance:com.grid.tests.TestGrid@793be5ca]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class sample.listener.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestGrid.testRunInstanceOnGrid(java.lang.String,java.lang.String)[pri:0, instance:com.grid.tests.TestGrid@209da20d]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class sample.listener.Listener
+]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-08-04T14:59:32 IST" name="Default suite" finished-at="2021-08-04T14:59:51 IST" duration-ms="19379">
+  <suite started-at="2021-08-06T00:04:59 IST" name="GridSuite" finished-at="2021-08-06T00:05:07 IST" duration-ms="8375">
     <groups>
     </groups>
-    <test started-at="2021-08-04T14:59:32 IST" name="Default test" finished-at="2021-08-04T14:59:51 IST" duration-ms="19379">
-      <class name="com.rahulshetty.tests.TestRSAcademy">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.rahulshetty.tests.TestRSAcademy@7fee8714]" started-at="2021-08-04T14:59:32 IST" name="setUp" finished-at="2021-08-04T14:59:39 IST" duration-ms="7357" status="PASS">
+    <test started-at="2021-08-06T00:04:59 IST" name="RunOnChrome" finished-at="2021-08-06T00:05:04 IST" duration-ms="5092">
+      <class name="com.grid.tests.TestGrid">
+        <test-method signature="testRunInstanceOnGrid(java.lang.String,java.lang.String)[pri:0, instance:com.grid.tests.TestGrid@793be5ca]" started-at="2021-08-06T00:04:59 IST" name="testRunInstanceOnGrid" finished-at="2021-08-06T00:05:04 IST" duration-ms="5040" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost:4545/wd/hub]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class sample.listener.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class sample.listener.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestGrid.testRunInstanceOnGrid(java.lang.String,java.lang.String)[pri:0, instance:com.grid.tests.TestGrid@793be5ca]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class sample.listener.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestGrid.testRunInstanceOnGrid(java.lang.String,java.lang.String)[pri:0, instance:com.grid.tests.TestGrid@793be5ca]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class sample.listener.Listener
+]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testCurrencySelection()[pri:0, instance:com.rahulshetty.tests.TestRSAcademy@7fee8714]" started-at="2021-08-04T14:59:39 IST" name="testCurrencySelection" finished-at="2021-08-04T14:59:50 IST" duration-ms="11192" status="PASS">
+        </test-method> <!-- testRunInstanceOnGrid -->
+      </class> <!-- com.grid.tests.TestGrid -->
+    </test> <!-- RunOnChrome -->
+    <test started-at="2021-08-06T00:04:59 IST" name="RunOnFireFox" finished-at="2021-08-06T00:05:07 IST" duration-ms="8375">
+      <class name="com.grid.tests.TestGrid">
+        <test-method signature="testRunInstanceOnGrid(java.lang.String,java.lang.String)[pri:0, instance:com.grid.tests.TestGrid@209da20d]" started-at="2021-08-06T00:04:59 IST" name="testRunInstanceOnGrid" finished-at="2021-08-06T00:05:07 IST" duration-ms="8331" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost:4545/wd/hub]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class sample.listener.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class sample.listener.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestGrid.testRunInstanceOnGrid(java.lang.String,java.lang.String)[pri:0, instance:com.grid.tests.TestGrid@209da20d]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class sample.listener.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestGrid.testRunInstanceOnGrid(java.lang.String,java.lang.String)[pri:0, instance:com.grid.tests.TestGrid@209da20d]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class sample.listener.Listener
+]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- testCurrencySelection -->
-        <test-method signature="testPassengersSelection()[pri:0, instance:com.rahulshetty.tests.TestRSAcademy@7fee8714]" started-at="2021-08-04T14:59:50 IST" name="testPassengersSelection" finished-at="2021-08-04T14:59:51 IST" duration-ms="552" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPassengersSelection -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.rahulshetty.tests.TestRSAcademy@7fee8714]" started-at="2021-08-04T14:59:51 IST" name="tearDown" finished-at="2021-08-04T14:59:51 IST" duration-ms="198" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.rahulshetty.tests.TestRSAcademy -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- testRunInstanceOnGrid -->
+      </class> <!-- com.grid.tests.TestGrid -->
+    </test> <!-- RunOnFireFox -->
+  </suite> <!-- GridSuite -->
 </testng-results>

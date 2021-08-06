@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GridSuite" parallel="tests" thread-count="2">
+	<listeners>
+		<listener class-name="sample.listener.Listener"></listener>
+	</listeners>
+	<parameter name="browserType" value="chrome"></parameter>
+	<parameter name="grid" value="http://localhost:4545/wd/hub"></parameter>
+	<test name="RunOnChrome">
+		<classes>
+			<class name="com.grid.tests.TestGrid"></class>
+		</classes>
+	</test>
+	<parameter name="browserType" value="firefox"></parameter>
+	<test name="RunOnFireFox">
+		<classes>
+			<class name="com.grid.tests.TestGrid"></class>
+		</classes>
+	</test>
+</suite>
