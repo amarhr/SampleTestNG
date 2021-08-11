@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.rahulshetty.pages.RSAcademyHomePage;
@@ -16,8 +17,9 @@ public class TestRSAcademy {
 	RSAcademyHomePage rsHomePage;
 
 	@BeforeTest
-	public void setUp() {
-		core = new SeleniumCore("Chromeheadless");
+	@Parameters({ "browserType", "grid" })
+	public void setUp(String browserType, String grid) {
+		core = new SeleniumCore("Chromeheadless", grid);
 		driver = core.getDriver();
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
@@ -28,7 +30,7 @@ public class TestRSAcademy {
 	public void testCurrencySelection() {
 		rsHomePage.selectCurrencyByIndex(3);
 		rsHomePage.verifySelectedCurrencyIs("USD");
-		
+
 		core.hardWait(2);
 		rsHomePage.selectCurrencyByVisibleText("Select");
 		// rsHomePage.getCurrencyDropDown().deselectByIndex(3);
@@ -38,14 +40,14 @@ public class TestRSAcademy {
 
 		rsHomePage.selectCurrencyByVisibleText("INR");
 		rsHomePage.verifySelectedCurrencyIs("INR");
-		
+
 		core.hardWait(2);
 		rsHomePage.selectCurrencyByVisibleText("Select");
 		core.hardWait(2);
 
 		rsHomePage.selectCurrencyByValue("AED");
 		rsHomePage.verifySelectedCurrencyIs("AED");
-		
+
 		rsHomePage.selectCurrencyByVisibleText("Select");
 
 		core.hardWait(2);

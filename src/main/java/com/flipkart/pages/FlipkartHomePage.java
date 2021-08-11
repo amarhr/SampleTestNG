@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import core.util.SeleniumCore;
 import lombok.Getter;
 
 public class FlipkartHomePage {

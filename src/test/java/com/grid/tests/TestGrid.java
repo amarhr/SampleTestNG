@@ -1,24 +1,35 @@
 package com.grid.tests;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class TestGrid {
+import com.core.tests.TestBase;
+
+import core.util.SeleniumCore;
+
+public class TestGrid extends TestBase{
 	
-	@Test
+	@BeforeTest
+	@Parameters({ "browserType", "grid" })
+	public void setUp(String browserType, String url) {
+		core = new SeleniumCore(browserType, url);
+		driver = core.getDriver();
+	}
+	
+	@Test(invocationCount = 2)
 	@Parameters({"browserType", "grid"})
 	public void testRunInstanceOnGrid(String browserType, String grid) throws MalformedURLException {
-		DesiredCapabilities DC = new DesiredCapabilities();
-		DC.setBrowserName(browserType);
-		//DC.setPlatform(Platform.LINUX);
-		WebDriver driver = new RemoteWebDriver(new URL(grid), DC);
 		driver.get("http://rediff.com");
+		core.hardWait(2);
+		core.takeScreenShot("RunInstanceOnGrid");
+	}
+	
+	@AfterTest
+	public void tearDown() {
 		driver.quit();
 	}
 }

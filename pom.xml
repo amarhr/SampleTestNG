@@ -18,6 +18,11 @@
 			<version>3.141.59</version>
 		</dependency>
 		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.8</version>
@@ -34,8 +39,6 @@
 			<artifactId>extentreports</artifactId>
 			<version>2.41.2</version>
 		</dependency>
-		<!-- <dependency> <groupId>org.projectlombok</groupId> <artifactId>lombok</artifactId> 
-			<version>1.18.8</version> <scope>provided</scope> </dependency> -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -43,7 +46,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
+			<artifactId> 4j-api</artifactId>
 			<version>2.6.1</version>
 		</dependency>
 		<dependency>
@@ -62,11 +65,9 @@
 					<inherited>true</inherited>
 					<configuration>
 						<suiteXmlFiles>
-							<!--<suiteXmlFile>TestGrouping.xml</suiteXmlFile>
-								<suiteXmlFile>TestGuru99.xml</suiteXmlFile> 
-								<suiteXmlFile>TestScrolling.xml</suiteXmlFile> 
-								<suiteXmlFile>testng.xml</suiteXmlFile>
-								<suiteXmlFile>TestScrolling.xml</suiteXmlFile>-->
+							<!--<suiteXmlFile>TestGrouping.xml</suiteXmlFile> <suiteXmlFile>TestGuru99.xml</suiteXmlFile> 
+								<suiteXmlFile>TestScrolling.xml</suiteXmlFile> <suiteXmlFile>testng.xml</suiteXmlFile> 
+								<suiteXmlFile>TestScrolling.xml</suiteXmlFile> -->
 							<suiteXmlFile>TestGrid.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>

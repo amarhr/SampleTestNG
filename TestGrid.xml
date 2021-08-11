@@ -4,17 +4,48 @@
 	<listeners>
 		<listener class-name="sample.listener.Listener"></listener>
 	</listeners>
-	<parameter name="browserType" value="chrome"></parameter>
 	<parameter name="grid" value="http://localhost:4545/wd/hub"></parameter>
-	<test name="RunOnChrome">
+	<test name="RunOnRemoteChrome">
+		<parameter name="browserType" value="chromeremote"></parameter>
 		<classes>
 			<class name="com.grid.tests.TestGrid"></class>
 		</classes>
 	</test>
-	<parameter name="browserType" value="firefox"></parameter>
-	<test name="RunOnFireFox">
+	<test name="RunOnLocalChrome">
+		<parameter name="browserType" value="chrome"></parameter>
 		<classes>
 			<class name="com.grid.tests.TestGrid"></class>
 		</classes>
 	</test>
+	<test name="RunOnHeadlessChrome">
+		<parameter name="browserType" value="chromeheadless"></parameter>
+		<classes>
+			<class name="com.grid.tests.TestGrid"></class>
+		</classes>
+	</test>	
+	
+	<test name="RunOnRemoteFireFox">
+		<parameter name="browserType" value="firefoxremote"></parameter>
+		<classes>
+			<class name="com.grid.tests.TestGrid"></class>
+		</classes>
+	</test>
+	<!-- <test name="RunOnLocalFireFox">
+		<parameter name="browserType" value="firefox"></parameter>
+		<classes>
+			<class name="com.grid.tests.TestGrid"></class>
+		</classes>
+	</test> 
+	<test name="RunOnHeadlessFireFox">
+		<parameter name="browserType" value="firefoxremoteheadless"></parameter>
+		<classes>
+			<class name="com.grid.tests.TestGrid"></class>
+		</classes>
+	</test>	-->
+	<!-- <test name="RunOnIE">
+		<parameter name="browserType" value="ie"></parameter>
+		<classes>
+			<class name="com.grid.tests.TestGrid"></class>
+		</classes>
+	</test> -->
 </suite>

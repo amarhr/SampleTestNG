@@ -1,15 +1,5 @@
-[DEBUG] 2021-08-03 21:49:02.374 [main] Log4JTest - Debug Message Logged !!!
-[INFO ] 2021-08-03 21:49:02.375 [main] Log4JTest - Info Message Logged !!!
-[ERROR] 2021-08-03 21:49:02.376 [main] Log4JTest - Error Message Logged !!!
-java.lang.NullPointerException: NullError
-	at com.log4j.tests.Log4JTest.main(Log4JTest.java:12) [test-classes/:?]
-[DEBUG] 2021-08-03 21:50:19.070 [main] Log4JTest - Debug Message Logged !!!
-[INFO ] 2021-08-03 21:50:19.072 [main] Log4JTest - Info Message Logged !!!
-[ERROR] 2021-08-03 21:50:19.072 [main] Log4JTest - Error Message Logged !!!
-java.lang.NullPointerException: NullError
-	at com.log4j.tests.Log4JTest.main(Log4JTest.java:12) [test-classes/:?]
-[DEBUG] 2021-08-03 21:50:25.549 [main] Log4JTest - Debug Message Logged !!!
-[INFO ] 2021-08-03 21:50:25.550 [main] Log4JTest - Info Message Logged !!!
-[ERROR] 2021-08-03 21:50:25.550 [main] Log4JTest - Error Message Logged !!!
+[DEBUG] 2021-08-12 00:12:42.866 [main] Log4JTest - Debug Message Logged !!!
+[INFO ] 2021-08-12 00:12:42.872 [main] Log4JTest - Info Message Logged !!!
+[ERROR] 2021-08-12 00:12:42.872 [main] Log4JTest - Error Message Logged !!!
 java.lang.NullPointerException: NullError
 	at com.log4j.tests.Log4JTest.main(Log4JTest.java:12) [test-classes/:?]

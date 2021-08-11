@@ -11,13 +11,13 @@ import lombok.Getter;
 
 public class GuruHomePage {
 	SeleniumCore core;
-	
+
 	public GuruHomePage(SeleniumCore core) {
 		this.core = core;
 		PageFactory.initElements(core.getDriver(), this);
 	}
-	
-	@FindBy(how = How.XPATH, xpath="//*[@id='navbar-brand-centered']/ul/li[1]/a")
+
+	@FindBy(how = How.XPATH, xpath = "//*[@id='navbar-brand-centered']/ul/li[1]/a")
 	@CacheLookup
 	@Getter
 	private WebElement seleniumLink;
@@ -26,10 +26,17 @@ public class GuruHomePage {
 	@CacheLookup
 	@Getter
 	private WebElement ethicalHacking;
-	
+
 	@FindBy(how = How.LINK_TEXT, linkText = "Books to Read")
 	@CacheLookup
 	@Getter
 	private WebElement booksToRead;
-	
+
+	public void mouseHoverOnBooksToRead() {
+		core.moveToElement(getBooksToRead());
+	}
+
+	public void mouseHoverOnSeleniumLink() {
+		core.moveToElement(getBooksToRead());
+	}
 }
