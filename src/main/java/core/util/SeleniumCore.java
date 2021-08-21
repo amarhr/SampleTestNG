@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -26,7 +26,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -39,6 +41,9 @@ public class SeleniumCore {
 	private Actions actions;
 	private JavascriptExecutor js;
 	private static final Logger LOGGER = LogManager.getLogger(SeleniumCore.class.getName());
+
+	public SeleniumCore() {
+	}
 
 	public SeleniumCore(String browserType) {
 		this(browserType, "");
@@ -58,12 +63,16 @@ public class SeleniumCore {
 		return driver;
 	}
 
+	public void setChromeDriverPath() {
+		File chromeExe = new File(System.getProperty("user.dir") + "/JARS/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", chromeExe.getAbsolutePath());
+	}
+
 	private void initializeBrowser(String browserType, String url) throws MalformedURLException {
 		LOGGER.debug("openBrowser()");
 		browserType = browserType.toLowerCase();
 
-		File chromeExe = new File(System.getProperty("user.dir") + "\\JARS\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", chromeExe.getAbsolutePath());
+		setChromeDriverPath();
 
 		if (browserType.contains("chrome")) {
 			switch (browserType.toLowerCase()) {
@@ -131,11 +140,36 @@ public class SeleniumCore {
 		hardWait(5);
 		actions.moveToElement(element).perform();
 	}
+	
+	public void dragAndDropComposite(WebElement fromElement, WebElement toElement) {
+		//Creating object of Actions class to build composite actions
+		Actions builder = new Actions(driver);
+
+		//Building a drag and drop action
+		Action dragAndDrop = builder.clickAndHold(fromElement)
+		.moveToElement(toElement)
+		.release(toElement)
+		.build();
+
+		//Performing the drag and drop action
+		dragAndDrop.perform();
+	}
+	
+	public void dragAndDrop(WebElement fromElement, WebElement toElement) {
+		//Creating object of Actions class to build composite actions
+		Actions builder = new Actions(driver);
+
+		//Building a drag and drop action
+		Action dragAndDrop = builder.dragAndDrop(fromElement, toElement).build();
+
+		//Performing the drag and drop action
+		dragAndDrop.perform();
+	}
 
 	public void scrollIntoView(WebElement element) {
 		js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView()", element);
-		
+
 		hardWait(3);
 	}
 
@@ -193,8 +227,10 @@ public class SeleniumCore {
 
 	// Fluent waits
 	public WebElement waitFluentlyForElement(By byObj, int seconds) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(seconds))
-				.pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class)
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+				.withTimeout(Duration.ofSeconds(seconds))
+				.pollingEvery(Duration.ofSeconds(5))
+				.ignoring(NoSuchElementException.class)
 				.ignoring(StaleElementReferenceException.class);
 		/*
 		 * WebElement element = wait.until( new Function<WebDriver, WebElement>() {
@@ -216,19 +252,19 @@ public class SeleniumCore {
 
 	public String takeScreenShot(String fileName) {
 		TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
-		File file_Screenshot = takeScreenShot.getScreenshotAs(OutputType.FILE);
+		File screenshot_File = takeScreenShot.getScreenshotAs(OutputType.FILE);
 		Random random = new Random();
-		String screenshotPath = System.getProperty("user.dir") + "\\screenshots\\" + fileName;
-		screenshotPath += (random.nextInt(5000) + ".png");
+		String screenshot_Path = System.getProperty("user.dir") + "\\screenshots\\" + fileName;
+		screenshot_Path += (random.nextInt(5000) + ".png");
 
 		try {
 
-			FileUtils.copyFile(file_Screenshot, new File(screenshotPath));
+			FileUtils.copyFile(screenshot_File, new File(screenshot_Path));
 		} catch (IOException e) {
 			LOGGER.error(e.getMessage());
 		}
 
-		return screenshotPath;
+		return screenshot_Path;
 	}
 
 	public void quit() {
@@ -237,5 +273,54 @@ public class SeleniumCore {
 
 	public void close() {
 		driver.close();
+	}
+
+	public void switchToParentFrame() {
+		driver.switchTo().parentFrame();
+		// driver.switchTo().defaultContent()
+	}
+
+	public void changeTheDownloadDirectory() {
+		String downloadFilepath = "/path/to/download";
+		HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+		chromePrefs.put("profile.default_content_settings.popups", 0);
+		chromePrefs.put("download.default_directory", downloadFilepath);
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("prefs", chromePrefs);
+
+		/*
+		 * DesiredCapabilities cap = DesiredCapabilities.chrome();
+		 * cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+		 * cap.setCapability(ChromeOptions.CAPABILITY, options); cap.merge(options);
+		 */
+
+		WebDriver driver = new ChromeDriver(options);
+	}
+
+	public void navigateTo(String url) {
+		driver.navigate().to(url);
+	}
+
+	public void navigateBack(String url) {
+		driver.navigate().back();
+	}
+
+	public void navigateForward(String url) {
+		driver.navigate().forward();
+	}
+
+	public void refreshUsingNavigate(String url) {
+		driver.navigate().refresh();
+	}
+
+	public void refreshByUsingJS() {
+		js = (JavascriptExecutor) driver;
+		js.executeScript("location.reload()");
+	}
+
+	public void refrehsUsingKeys() {
+		Actions actions = new Actions(driver);
+		actions.sendKeys(Keys.F5).build().perform();
+		;
 	}
 }

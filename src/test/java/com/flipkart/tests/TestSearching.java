@@ -1,5 +1,7 @@
 package com.flipkart.tests;
 
+import java.lang.reflect.Method;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;

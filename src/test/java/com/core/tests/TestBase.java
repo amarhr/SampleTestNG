@@ -26,7 +26,7 @@ import core.util.SeleniumCore;
 
 // @Listeners(sample.listener.Listener.class)
 public class TestBase {
-	protected WebDriver driver;
+	protected static WebDriver driver;
 
 	protected ExtentHtmlReporter htmlReporter;
 	protected ExtentReports exReports;
