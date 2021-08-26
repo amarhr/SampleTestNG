@@ -28,7 +28,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -57,6 +56,7 @@ public class SeleniumCore {
 		}
 		actions = new Actions(driver);
 		driver.manage().window().maximize();
+		// driver.get(url);
 	}
 
 	public WebDriver getDriver() {
@@ -64,11 +64,12 @@ public class SeleniumCore {
 	}
 
 	public void setChromeDriverPath() {
-		File chromeExe = new File(System.getProperty("user.dir") + "/JARS/chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", chromeExe.getAbsolutePath());
+		// File chromeExe = new File(System.getProperty("user.dir") + "/JARS/chromedriver.exe");
+		// System.setProperty("webdriver.chrome.driver", chromeExe.getAbsolutePath());
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/JARS/chromedriver.exe");
 	}
 
-	private void initializeBrowser(String browserType, String url) throws MalformedURLException {
+	private void initializeBrowser(String browserType, String hubUrl) throws MalformedURLException {
 		LOGGER.debug("openBrowser()");
 		browserType = browserType.toLowerCase();
 
@@ -86,7 +87,7 @@ public class SeleniumCore {
 				driver = new ChromeDriver(options);
 				break;
 			case "chromeremote":
-				driver = initiateRemoteDriver("chrome", url);
+				driver = initiateRemoteDriver("chrome", hubUrl);
 				break;
 			}
 		}
@@ -102,14 +103,14 @@ public class SeleniumCore {
 				driver = new FirefoxDriver(options);
 				break;
 			case "firefoxremote":
-				driver = initiateRemoteDriver("firefox", url);
+				driver = initiateRemoteDriver("firefox", hubUrl);
 				break;
 			}
 		}
 
 		switch (browserType.toLowerCase()) {
 		case "ieremote":
-			driver = initiateRemoteDriver("ie", url);
+			driver = initiateRemoteDriver("ie", hubUrl);
 			break;
 		case "ie":
 			driver = new InternetExplorerDriver();
@@ -117,8 +118,6 @@ public class SeleniumCore {
 		}
 
 		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 		driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
@@ -199,7 +198,12 @@ public class SeleniumCore {
 
 	public void scrollToTheEnd() {
 		js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight);");
+	}
+	
+	public void scrollToTheTop() {
+		js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,-document.body.scrollHeight);");
 	}
 
 	public String getPageTitleUsingJS() {

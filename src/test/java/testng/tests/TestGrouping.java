@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TestGrouping {
-	@BeforeTest
+	@BeforeTest(alwaysRun = true)
 	public void beforeTest() { 
 		System.out.println("**Before <test> - Runs before the test tag");
 	}

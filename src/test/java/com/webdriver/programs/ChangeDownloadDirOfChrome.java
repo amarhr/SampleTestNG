@@ -13,10 +13,9 @@ import core.util.SeleniumCore;
 
 public class ChangeDownloadDirOfChrome {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 
 		SeleniumCore core = new SeleniumCore();
-
 		// Setting chrome driver path
 		core.setChromeDriverPath();
 
@@ -25,11 +24,13 @@ public class ChangeDownloadDirOfChrome {
 
 		// Use File.separator as it will work on any OS
 		prefs.put("download.default_directory", System.getProperty("user.dir") + File.separator + "externalFiles");
+		// prefs.put("incognito", true);
 
 		// Adding cpabilities to ChromeOptions
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("prefs", prefs);
 		options.addArguments("start-maximized");
+		options.addArguments("incognito");
 
 		// Printing set download directory
 		// .out.println(options.exper);
@@ -42,6 +43,8 @@ public class ChangeDownloadDirOfChrome {
 
 		// Click on download selenium server jar file
 		driver.findElement(By.xpath("//a[text()='32 bit Windows IE']")).click();
+		
+		Thread.sleep(5000);
 		driver.quit();
 	}
 }

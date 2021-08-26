@@ -43,9 +43,22 @@ public class TestScrolling extends TestBase{
 		core.hardWait(3);		
 		guruHomePage.mouseHoverOnBooksToRead();
 		guruHomePage.mouseHoverOnSeleniumLink();
+		
+		core.scrollToTheEnd();
+		core.hardWait(1);
+		core.scrollToTheTop();
+	}
+	
+	@Test
+	public void TestScrollUpAndDown() throws InterruptedException {
+		GuruHomePage guruHomePage = new GuruHomePage(core);
+
+		core.scrollToTheEnd();
+		core.hardWait(1);
+		core.scrollToTheTop();
 	}
 
-	@Test
+	// @Test
 	public void TestScrollUsingActions(){
 		GuruHomePage guruHomePage = new GuruHomePage(core);
 		core.hardWait(3);		
