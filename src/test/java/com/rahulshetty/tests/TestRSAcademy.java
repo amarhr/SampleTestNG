@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.rahulshetty.pages.RSAcademyHomePage;
+import com.rs.pages.RSAcademyHomePage;
 
 import core.util.SeleniumCore;
 

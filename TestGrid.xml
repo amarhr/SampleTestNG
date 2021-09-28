@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="GridSuite" parallel="tests" thread-count="2">
 	<!-- <listeners>
-		<listener class-name="sample.listener.Listener"></listener>
+		<listener class-name="com.listeners.hooks"></listener>
 	</listeners> -->
 	<parameter name="grid" value="http://localhost:4444/wd/hub"></parameter>
 	<test name="RunOnRemoteChrome">

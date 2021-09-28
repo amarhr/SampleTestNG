@@ -3,7 +3,7 @@
 <!--  Running the tests in the class sample.tests.TestPriority parallelly. Maximum 2 tests at a time.-->
 <suite name="Suite"  parallel="tests" thread-count="2">
 	<listeners>
-		<listener class-name="sample.listener.Listener"></listener>
+		<listener class-name="com.listeners.hooks"></listener>
 	</listeners>
 	<test name="TestChrome">
 		<parameter name="browserType" value="Chrome"></parameter>

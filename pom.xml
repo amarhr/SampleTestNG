@@ -73,6 +73,12 @@
 			<artifactId>cucumber-core</artifactId>
 			<version>6.11.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.4.3</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -86,8 +92,8 @@
 						<suiteXmlFiles>
 							<!--<suiteXmlFile>TestGrouping.xml</suiteXmlFile> <suiteXmlFile>TestGuru99.xml</suiteXmlFile> 
 								<suiteXmlFile>TestScrolling.xml</suiteXmlFile> <suiteXmlFile>testng.xml</suiteXmlFile> 
-								<suiteXmlFile>TestScrolling.xml</suiteXmlFile> -->
-							<suiteXmlFile>TestGrid.xml</suiteXmlFile>
+								<suiteXmlFile>TestScrolling.xml</suiteXmlFile> <suiteXmlFile>TestGrid.xml</suiteXmlFile> -->
+							<suiteXmlFile>TestWebDriverExceptionsSuite.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

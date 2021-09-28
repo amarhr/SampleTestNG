@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <!--  Running the tests in the class sample.tests.TestPriority parallelly. Maximum 2 tests at a time.-->
-<suite name="Suite"  parallel="tests" thread-count="2">
+<suite name="Suite"  parallel="tests" thread-count="5">
 	<listeners>
-		<listener class-name="sample.listener.Listener"></listener>
+		<listener class-name="com.listeners.hooks.Listener"></listener>
 	</listeners>
 	<test name="TestChrome">
 		<parameter name="browserType" value="Chrome"></parameter>
 		<classes >
-			<class name="sample.tests.TestPriority" />
+			<class name="testng.tests.TestPriority" />
 		</classes>
 	</test>
 	
 	<test name="TestIE">
 		<parameter name="browserType" value="IE"></parameter>
 		<classes >
-			<class name="sample.tests.TestPriority" />
+			<class name="testng.tests.TestPriority" />
 		</classes>
 	</test>
 	
 	<test name="TestFirefox">
 		<parameter name="browserType" value="Firefox"></parameter>
 		<classes >
-			<class name="sample.tests.TestPriority" />
+			<class name="testng.tests.TestPriority" />
 		</classes>
 	</test>
 	

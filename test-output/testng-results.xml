@@ -1,29 +1,1610 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Suite Started ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.One()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.One()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Two()[pri:1, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Two()[pri:1, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Three()[pri:2, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Three()[pri:2, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[Suite Started ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.One()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.One()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Two()[pri:1, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Two()[pri:1, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Three()[pri:2, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Three()[pri:2, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[Suite Started ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.One()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.One()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Two()[pri:1, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Two()[pri:1, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Three()[pri:2, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Three()[pri:2, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[Suite Started ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In onStart(ITestContext arg) ===== :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[Before executingTestPriority.afterSuite()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
+    <line>
+      <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+    </line>
+    <line>
+      <![CDATA[After executing :TestPriority.afterSuite()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-08-25T11:19:14 IST" name="Default suite" finished-at="2021-08-25T11:19:20 IST" duration-ms="5716">
+  <suite started-at="2021-09-17T12:44:59 IST" name="Suite" finished-at="2021-09-17T12:45:03 IST" duration-ms="4329">
     <groups>
     </groups>
-    <test started-at="2021-08-25T11:19:14 IST" name="Default test" finished-at="2021-08-25T11:19:20 IST" duration-ms="5716">
-      <class name="com.guru99.tests.TestScrolling">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.guru99.tests.TestScrolling@48a12036]" started-at="2021-08-25T11:19:14 IST" name="beforeSuite" finished-at="2021-08-25T11:19:14 IST" duration-ms="73" status="PASS">
+    <test started-at="2021-09-17T12:44:59 IST" name="TestChrome" finished-at="2021-09-17T12:45:01 IST" duration-ms="1522">
+      <class name="testng.tests.TestPriority">
+        <test-method is-config="true" signature="OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:44:59 IST" name="OpenBrowser" finished-at="2021-09-17T12:45:01 IST" duration-ms="1384" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.guru99.tests.TestScrolling@48a12036]" started-at="2021-08-25T11:19:14 IST" name="setUp" finished-at="2021-08-25T11:19:19 IST" duration-ms="4504" status="PASS">
+        </test-method> <!-- OpenBrowser -->
+        <test-method signature="One()[pri:0, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:45:01 IST" name="One" finished-at="2021-09-17T12:45:01 IST" duration-ms="24" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.One()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.One()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestScrollUpAndDown()[pri:0, instance:com.guru99.tests.TestScrolling@48a12036]" started-at="2021-08-25T11:19:19 IST" name="TestScrollUpAndDown" finished-at="2021-08-25T11:19:20 IST" duration-ms="1040" status="PASS">
+        </test-method> <!-- One -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:45:01 IST" name="quit" finished-at="2021-09-17T12:45:01 IST" duration-ms="1" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- TestScrollUpAndDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.guru99.tests.TestScrolling@48a12036]" started-at="2021-08-25T11:19:20 IST" name="tearDown" finished-at="2021-08-25T11:19:20 IST" duration-ms="147" status="PASS">
+        </test-method> <!-- quit -->
+        <test-method signature="Two()[pri:1, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:45:01 IST" name="Two" finished-at="2021-09-17T12:45:01 IST" duration-ms="6" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Two()[pri:1, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Two()[pri:1, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.guru99.tests.TestScrolling -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- Two -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:45:01 IST" name="quit" finished-at="2021-09-17T12:45:01 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Three()[pri:2, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:45:01 IST" name="Three" finished-at="2021-09-17T12:45:01 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Three()[pri:2, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Three()[pri:2, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Three -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:45:01 IST" name="quit" finished-at="2021-09-17T12:45:01 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Fifth()[pri:3, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:45:01 IST" name="Fifth" finished-at="2021-09-17T12:45:01 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Fifth -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:45:01 IST" name="quit" finished-at="2021-09-17T12:45:01 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Fourth()[pri:3, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:45:01 IST" name="Fourth" finished-at="2021-09-17T12:45:01 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Fourth -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@1a18644]" started-at="2021-09-17T12:45:01 IST" name="quit" finished-at="2021-09-17T12:45:01 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@1a18644]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- testng.tests.TestPriority -->
+    </test> <!-- TestChrome -->
+    <test started-at="2021-09-17T12:44:59 IST" name="TestIE" finished-at="2021-09-17T12:45:02 IST" duration-ms="2803">
+      <class name="testng.tests.TestPriority">
+        <test-method is-config="true" signature="OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:44:59 IST" name="OpenBrowser" finished-at="2021-09-17T12:45:02 IST" duration-ms="2764" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method signature="One()[pri:0, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:45:02 IST" name="One" finished-at="2021-09-17T12:45:02 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.One()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.One()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- One -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:45:02 IST" name="quit" finished-at="2021-09-17T12:45:02 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Two()[pri:1, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:45:02 IST" name="Two" finished-at="2021-09-17T12:45:02 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Two()[pri:1, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Two()[pri:1, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Two -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:45:02 IST" name="quit" finished-at="2021-09-17T12:45:02 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Three()[pri:2, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:45:02 IST" name="Three" finished-at="2021-09-17T12:45:02 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Three()[pri:2, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Three()[pri:2, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Three -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:45:02 IST" name="quit" finished-at="2021-09-17T12:45:02 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Fifth()[pri:3, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:45:02 IST" name="Fifth" finished-at="2021-09-17T12:45:02 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Fifth -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:45:02 IST" name="quit" finished-at="2021-09-17T12:45:02 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Fourth()[pri:3, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:45:02 IST" name="Fourth" finished-at="2021-09-17T12:45:02 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Fourth -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@437da279]" started-at="2021-09-17T12:45:02 IST" name="quit" finished-at="2021-09-17T12:45:02 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@437da279]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- testng.tests.TestPriority -->
+    </test> <!-- TestIE -->
+    <test started-at="2021-09-17T12:44:59 IST" name="TestFirefox" finished-at="2021-09-17T12:45:03 IST" duration-ms="4329">
+      <class name="testng.tests.TestPriority">
+        <test-method is-config="true" signature="OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:44:59 IST" name="OpenBrowser" finished-at="2021-09-17T12:45:03 IST" duration-ms="4293" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.OpenBrowser(java.lang.String)[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method signature="One()[pri:0, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="One" finished-at="2021-09-17T12:45:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.One()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.One()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- One -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="quit" finished-at="2021-09-17T12:45:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Two()[pri:1, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="Two" finished-at="2021-09-17T12:45:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Two()[pri:1, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Two()[pri:1, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Two -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="quit" finished-at="2021-09-17T12:45:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Three()[pri:2, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="Three" finished-at="2021-09-17T12:45:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Three()[pri:2, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Three()[pri:2, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Three -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="quit" finished-at="2021-09-17T12:45:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Fifth()[pri:3, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="Fifth" finished-at="2021-09-17T12:45:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Fifth()[pri:3, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Fifth -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="quit" finished-at="2021-09-17T12:45:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="Fourth()[pri:3, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="Fourth" finished-at="2021-09-17T12:45:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In onTestStart(ITestResult arg) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.Fourth()[pri:3, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+            <line>
+              <![CDATA[In onTestSuccess(ITestResult result) ===== :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[In before method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[Before executingTestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Fourth -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="quit" finished-at="2021-09-17T12:45:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.quit()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:testng.tests.TestPriority@290222c1]" started-at="2021-09-17T12:45:03 IST" name="afterSuite" finished-at="2021-09-17T12:45:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[In after method Invocation :class com.listeners.hooks.Listener
+]]>
+            </line>
+            <line>
+              <![CDATA[After executing :TestPriority.afterSuite()[pri:0, instance:testng.tests.TestPriority@290222c1]
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testng.tests.TestPriority -->
+    </test> <!-- TestFirefox -->
+  </suite> <!-- Suite -->
 </testng-results>

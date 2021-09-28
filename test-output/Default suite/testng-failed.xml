@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.grid.tests.TestGrid">
+      <class name="testng.tests.TestPriority">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="beforeSuite"/>
-          <include name="testRunInstanceOnGrid"/>
+          <include name="OpenBrowser"/>
+          <include name="afterSuite"/>
+          <include name="One"/>
+          <include name="quit"/>
         </methods>
-      </class> <!-- com.grid.tests.TestGrid -->
+      </class> <!-- testng.tests.TestPriority -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

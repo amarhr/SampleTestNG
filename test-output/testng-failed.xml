@@ -1,31 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [GridSuite]" guice-stage="DEVELOPMENT">
-  <parameter name="grid" value="http://localhost:4444/wd/hub"/>
-  <test thread-count="2" parallel="tests" name="RunOnRemoteChrome(failed)">
-    <parameter name="browserType" value="chromeremote"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.grid.tests.TestGrid">
+      <class name="testng.tests.TestPriority">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="beforeSuite"/>
-          <include name="testRunInstanceOnGrid"/>
+          <include name="OpenBrowser"/>
+          <include name="afterSuite"/>
+          <include name="One"/>
+          <include name="quit"/>
         </methods>
-      </class> <!-- com.grid.tests.TestGrid -->
+      </class> <!-- testng.tests.TestPriority -->
     </classes>
-  </test> <!-- RunOnRemoteChrome(failed) -->
-  <test thread-count="2" parallel="tests" name="RunOnRemoteFireFox(failed)">
-    <parameter name="browserType" value="firefoxremote"/>
-    <classes>
-      <class name="com.grid.tests.TestGrid">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="beforeSuite"/>
-          <include name="testRunInstanceOnGrid"/>
-        </methods>
-      </class> <!-- com.grid.tests.TestGrid -->
-    </classes>
-  </test> <!-- RunOnRemoteFireFox(failed) -->
-</suite> <!-- Failed suite [GridSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

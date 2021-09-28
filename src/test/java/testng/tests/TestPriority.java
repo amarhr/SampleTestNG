@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-// @Listeners(sample.listener.Listener.class)
+//@Listeners(sample.listener.Listener.class)
 public class TestPriority {
 	WebDriver driver;
 

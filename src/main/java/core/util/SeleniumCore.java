@@ -63,17 +63,19 @@ public class SeleniumCore {
 		return driver;
 	}
 
-	public void setChromeDriverPath() {
+	public static void setDriverPath() {
 		// File chromeExe = new File(System.getProperty("user.dir") + "/JARS/chromedriver.exe");
 		// System.setProperty("webdriver.chrome.driver", chromeExe.getAbsolutePath());
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/JARS/chromedriver.exe");
+		// System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/JARS/geckodriver.exe");
+		// System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "/JARS/IEDriverServer.exe");
 	}
 
 	private void initializeBrowser(String browserType, String hubUrl) throws MalformedURLException {
 		LOGGER.debug("openBrowser()");
 		browserType = browserType.toLowerCase();
 
-		setChromeDriverPath();
+		setDriverPath();
 
 		if (browserType.contains("chrome")) {
 			switch (browserType.toLowerCase()) {
@@ -196,11 +198,13 @@ public class SeleniumCore {
 		}
 	}
 
+	// + travels to the bottom
 	public void scrollToTheEnd() {
 		js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight);");
 	}
 	
+	// - travels to the top
 	public void scrollToTheTop() {
 		js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,-document.body.scrollHeight);");
@@ -231,7 +235,8 @@ public class SeleniumCore {
 
 	// Fluent waits
 	public WebElement waitFluentlyForElement(By byObj, int seconds) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+		FluentWait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver);
+		Wait<WebDriver> wait = fluentWait
 				.withTimeout(Duration.ofSeconds(seconds))
 				.pollingEvery(Duration.ofSeconds(5))
 				.ignoring(NoSuchElementException.class)

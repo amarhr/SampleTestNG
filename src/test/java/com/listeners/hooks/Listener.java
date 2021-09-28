@@ -17,20 +17,18 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.core.tests.TestBase;
 
-// IInvokedMethodListener
-public class Listener extends TestBase implements ISuiteListener, ITestListener, IInvokedMethodListener {
+public class Listener implements ISuiteListener, ITestListener, IInvokedMethodListener {
 	public ExtentReports exReports;
 	public ExtentTest exTest;
 	ThreadLocal<ExtentTest> threadLocalExtentTest = new ThreadLocal<ExtentTest>();
 
 	@Override
 	public void onStart(ISuite arg) {
-		Reporter.log("In onStart(ISuite arg) ===== :" + Listener.class + "\n");
-		System.out.println("In onStart(ISuite arg) :" + Listener.class);
+		Reporter.log("Suite Started ===== :" + Listener.class + "\n");
+		System.out.println("Suite Started ===== :" + Listener.class);
 
-		ExtentHtmlReporter exHtmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/STMExtentReport.html");
+		ExtentHtmlReporter exHtmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-extent/ExtentReport.html");
 		exReports = new ExtentReports();
 		exReports.attachReporter(exHtmlReporter);
 		exReports.setSystemInfo("Host", "Samples");
@@ -42,13 +40,15 @@ public class Listener extends TestBase implements ISuiteListener, ITestListener,
 		exHtmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 		exHtmlReporter.config().setTheme(Theme.STANDARD);
 
+		
+		// Do this to make the reporting thread safe if tests are running parallel
 		threadLocalExtentTest.set(exTest);
 	}
 
 	@Override
 	public void onFinish(ISuite arg) {
-		Reporter.log("In onFinish(ISuite arg) ===== :" + Listener.class + "\n");
-		System.out.println("In onFinish(ISuite arg) ===== :" + Listener.class);
+		Reporter.log("SUITE FINISHED:" + Listener.class + "\n");
+		System.out.println("SUITE FINISHED:" + Listener.class);
 		exReports.flush();
 	}
 
@@ -86,7 +86,7 @@ public class Listener extends TestBase implements ISuiteListener, ITestListener,
 		exTest.log(Status.PASS, "Test Case " + result.getMethod() + " Status is passed");
 		exTest.log(Status.PASS, MarkupHelper.createLabel(
 				"Test Case " + result.getMethod().getMethodName() + " Status is passed", ExtentColor.GREEN));
-		System.out.println("*************************ON TEST END*************************************");
+		System.out.println("*************************TEST PASSED*************************************");
 	}
 
 	@Override
@@ -98,7 +98,7 @@ public class Listener extends TestBase implements ISuiteListener, ITestListener,
 				MarkupHelper.createLabel(result.getMethod().getMethodName() + " - Test Case Failed", ExtentColor.RED));
 		exTest.log(Status.FAIL,
 				MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-		System.out.println("*************************ON TEST END*************************************");
+		System.out.println("*************************TEST FAILED*************************************");
 	}
 
 	@Override
@@ -108,7 +108,7 @@ public class Listener extends TestBase implements ISuiteListener, ITestListener,
 
 		exTest.log(Status.SKIP, MarkupHelper.createLabel(result.getMethod().getMethodName() + " - Test Case Skipped",
 				ExtentColor.ORANGE));
-		System.out.println("*************************ON TEST END*************************************");
+		System.out.println("*************************TEST SKIPPED*************************************");
 	}
 
 	@Override

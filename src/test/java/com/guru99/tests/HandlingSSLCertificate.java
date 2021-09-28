@@ -29,7 +29,7 @@ public class HandlingSSLCertificate {
 		 */
 
 		SeleniumCore core = new SeleniumCore("chrome");
-		core.setChromeDriverPath();
+		core.setDriverPath();
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
